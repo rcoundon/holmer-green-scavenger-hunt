@@ -11,10 +11,9 @@
         <b-field>
           <b-input placeholder="Enter your answer" v-model="form[question.id]"/>
         </b-field>
-          <b-button @click="checkAnswers(false)" type="is-success">Check Answers</b-button>
+          <b-button icon-left="check-circle" @click="checkAnswers(false)" type="is-success">Check answers</b-button>
       </div>
       <div class="grouped buttons tile" style="margin: auto;">
-        <b-button icon-left="check-circle" class="is-primary" @click="checkAnswers(false)">Check your answers</b-button>
         <b-button icon-left="exclamation-triangle" class="is-danger" @click="clearAnswers()">Clear all answers</b-button>
       </div>
     <p class="is-size-2 has-text-weight-semibold count" :class="successClass">

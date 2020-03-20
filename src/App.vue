@@ -8,8 +8,9 @@
       <p class="is-size-4 has-text-weight-bold instructions has-text-primary">
         Below is a list of questions that will take you on a little tour of our lovely village.
         <br/>
-        To save your answers and check how many you have right, just scroll to the bottom of the page
-        and tap the button.  Have fun!
+        All the answers consist of one or two words, or a number (enter 4 not four)
+        <br/>
+        To save your answers and check how many you have right, just tap a Check Answers button.  Have fun!
       </p>
     </div>
     <main-page/>
