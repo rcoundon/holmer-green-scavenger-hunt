@@ -1,24 +1,2 @@
 # scavenger-hunt
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+A very quick and dirty scavenger hunt website for the residents of Holmer Green to pass the time while we isolate
