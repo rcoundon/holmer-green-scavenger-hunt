@@ -30,7 +30,7 @@ export default {
       this.questions.forEach(question => {
         let thisAnswer = this.form[question.id];
         if (thisAnswer) {
-          if (thisAnswer == question.answer) {
+          if (thisAnswer.toLowerCase() == question.answer.toLowerCase()) {
             this.numberCorrect++;
           }
         }
