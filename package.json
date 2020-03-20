@@ -1,6 +1,9 @@
 {
   "name": "scavenger-hunt",
   "version": "0.1.0",
+  "author": {
+    "name": "Ross Coundon"
+  },
   "private": false,
   "license": "MIT",
   "scripts": {
