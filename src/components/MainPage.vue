@@ -7,14 +7,14 @@
     <div class="tile is-vertical is-parent">
       <div class="tile is-child box question-box" v-for="question in questions" :key="question.id">
         <img v-if="question.image" :src="getImageUrl(question)"/>
-        <span class="has-text-weight-semibold">{{ question.text }}</span>
+        <span class="has-text-weight-semibold">{{ question.id}}: {{question.text }}</span>
         <b-field>
           <b-input placeholder="Enter your answer" v-model="form[question.id]"/>
         </b-field>
-          <b-button @click="checkAnswers" type="is-success">Check Answers</b-button>
+          <b-button @click="checkAnswers(false)" type="is-success">Check Answers</b-button>
       </div>
       <div class="grouped buttons tile" style="margin: auto;">
-        <b-button icon-left="check-circle" class="is-primary" @click="checkAnswers()">Check your answers</b-button>
+        <b-button icon-left="check-circle" class="is-primary" @click="checkAnswers(false)">Check your answers</b-button>
         <b-button icon-left="exclamation-triangle" class="is-danger" @click="clearAnswers()">Clear all answers</b-button>
       </div>
     <p class="is-size-2 has-text-weight-semibold count" :class="successClass">
@@ -83,7 +83,7 @@ export default {
       const photo = require(`../assets/${question.image}`);
       return photo;
     },
-    checkAnswers() {
+    checkAnswers(initialLoad = false) {
       this.$store.dispatch("storeAnswers", this.form);
       this.numberCorrect = 0;
       this.questions.forEach(question => {
@@ -94,7 +94,9 @@ export default {
           }
         }
       });
-      this.$scrollTo("#top-answers", 1000);
+      if (!initialLoad) {
+        this.$scrollTo("#top-answers", 1000);
+      }
     },
     retrieveAnswersFromStore() {
       Object.assign(this.form, this.answers);
@@ -103,7 +105,7 @@ export default {
   },
   created() {
     this.retrieveAnswersFromStore();
-    this.checkAnswers();
+    this.checkAnswers(true);
   }
 };
 </script>
