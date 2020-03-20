@@ -107,7 +107,9 @@ export default {
       this.questions.forEach(question => {
         let thisAnswer = this.form[question.id];
         if (thisAnswer) {
-          if (thisAnswer.toLowerCase() == question.answer.toLowerCase()) {
+          if (
+            thisAnswer.trim().toLowerCase() == question.answer.toLowerCase()
+          ) {
             this.numberCorrect++;
           }
         }
