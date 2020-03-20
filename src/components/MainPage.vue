@@ -22,6 +22,20 @@
     </p>
     </div>
   </div>
+  <b-modal :active.sync="isCardModalActive" :width="640" scroll="keep">
+            <div class="card" style="text-align: center">
+                <div style="display: flex">
+                    <!-- <figure class=""> -->
+                        <img :src="successImage" alt="Yoda">
+                    <!-- </figure> -->
+                    <div class="card-content">
+                        <div class="content is-size-4">
+                            Impressive, your knowledge of Holmer Green is. This community is better for having you in it.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </b-modal>
 </div>
 </template>
 
@@ -34,21 +48,22 @@ export default {
     return {
       questions,
       form: {},
-      numberCorrect: 0
+      numberCorrect: 0,
+      isCardModalActive: false
     };
   },
   watch: {
     allRight: {
       handler: function(newVal) {
         if (newVal) {
-          this.$buefy.dialog.alert({
-            title: "Congratulations!",
-            message:
-              "Your knowledge of Holmer Green is impressive, you're a credit to society",
-            confirmText: "Close",
-            hasIcon: true,
-            icon: "treasure-chest"
-          });
+          // this.$buefy.dialog.alert({
+          //   title: "Congratulations!",
+          //   message:
+          //     "Your knowledge of Holmer Green is impressive, you're a credit to society",
+          //   confirmText: "Close",
+          //   hasIcon: true,
+          //   icon: "treasure-chest"
+          // });
         }
       }
     }
@@ -63,6 +78,9 @@ export default {
     },
     allRight() {
       return this.numberCorrect === this.totalQuestions;
+    },
+    successImage() {
+      return require("../assets/yoda.png");
     }
   },
   methods: {
@@ -96,6 +114,9 @@ export default {
       });
       if (!initialLoad) {
         this.$scrollTo("#top-answers", 1000);
+      }
+      if (this.allRight) {
+        this.isCardModalActive = true;
       }
     },
     retrieveAnswersFromStore() {

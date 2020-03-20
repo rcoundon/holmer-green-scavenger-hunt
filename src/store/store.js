@@ -11,7 +11,6 @@ export const mutations = {
 
 export const actions = {
   storeAnswers({ commit }, payload) {
-    console.log(payload);
     Object.assign(state.answers, payload);
     commit('STORE_ANSWERS', payload);
   }
