@@ -1,20 +1,22 @@
 export const state = {
   questions: [],
-  answers: []
+  answers: {}
 };
 
 export const mutations = {
-  SET_SELECTED_RESOURCE(state, payload) {
-    state.selectedResource = payload;
+  STORE_ANSWERS(state, payload) {
+    state.answers = payload;
   }
 };
 
 export const actions = {
-  setSelectedResource({ commit }, payload) {
-    commit('SET_SELECTED_RESOURCE', payload);
+  storeAnswers({ commit }, payload) {
+    console.log(payload);
+    Object.assign(state.answers, payload);
+    commit('STORE_ANSWERS', payload);
   }
 };
 
 export const getters = {
-  selectedResource: state => state.selectedResource
+  answers: state => state.answers
 };

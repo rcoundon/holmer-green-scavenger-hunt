@@ -7,9 +7,13 @@ import 'buefy/dist/buefy.css';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
-import { faTreasureChest } from '@fortawesome/pro-solid-svg-icons';
+import {
+  faTreasureChest,
+  faExclamationTriangle,
+  faCheckCircle
+} from '@fortawesome/pro-solid-svg-icons';
 
-library.add([faTreasureChest]);
+library.add([faTreasureChest, faExclamationTriangle, faCheckCircle]);
 
 Vue.component('vue-fontawesome', FontAwesomeIcon);
 

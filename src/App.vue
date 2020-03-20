@@ -1,8 +1,15 @@
 <template>
   <div id="app" class="splash">
     <div>
-      <p class="title has-text-weight-semibold is-size-3 has-text-primary">
+      <br/>
+      <p class="title has-text-weight-bold is-size-3 has-text-primary">
         Welcome to the Holmer Green coronavirus distraction scavenger hunt
+      </p>
+      <p class="is-size-4 has-text-weight-bold instructions has-text-primary">
+        Below is a list of questions that will take you on a little tour of our lovely village.
+        <br/>
+        To save your answers and check how many you have right, just scroll to the bottom of the page
+        and tap the button.  Have fun!
       </p>
     </div>
     <main-page/>
@@ -44,5 +51,10 @@ export default {
 .title {
   border-radius: 5px;
   background: whitesmoke;
+}
+
+.instructions {
+  padding: 0 2em;
+  background: white;
 }
 </style>
