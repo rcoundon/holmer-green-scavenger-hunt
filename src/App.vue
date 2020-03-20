@@ -1,7 +1,9 @@
 <template>
   <div id="app" class="splash">
-    <div class="">
-      <p class="title has-text-weight-semibold is-size-3 has-text-primary">Welcome to the Holmer Green COVID-19 scavenger hunt</p>
+    <div>
+      <p class="title has-text-weight-semibold is-size-3 has-text-primary">
+        Welcome to the Holmer Green coronavirus distraction scavenger hunt
+      </p>
     </div>
     <main-page/>
   </div>
@@ -14,6 +16,16 @@ export default {
   name: "App",
   components: {
     MainPage
+  },
+  created() {
+    this.$buefy.dialog.alert({
+      title: "Join the hunt!",
+      message:
+        "Mel & Ross hope you enjoy playing our little scavenger hunt around Holmer Green",
+      confirmText: "Let's do this!",
+      hasIcon: true,
+      icon: "treasure-chest"
+    });
   }
 };
 </script>
