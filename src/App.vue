@@ -1,19 +1,21 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="splash">
+    <div class="">
+      <p class="title has-text-weight-semibold is-size-3 has-text-primary">Welcome to the Holmer Green COVID-19 scavenger hunt</p>
+    </div>
+    <main-page/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MainPage from "./components/MainPage";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    MainPage
   }
-}
+};
 </script>
 
 <style>
@@ -22,7 +24,13 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+.splash {
+  background-image: url("./assets/Hgcommon.jpg");
+}
+
+.title {
+  border-radius: 5px;
+  background: whitesmoke;
 }
 </style>
