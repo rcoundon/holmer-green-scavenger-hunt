@@ -31,7 +31,7 @@ export default {
   components: {
     // Avatar
   },
-  data() {
+  data: () => {
     return {
       questions,
       form: {},
