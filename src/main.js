@@ -1,8 +1,9 @@
 import Vue from 'vue';
 import App from './App.vue';
-import store from '@/store';
+import VueScrollTo from 'vue-scrollto';
 import Buefy from 'buefy';
 import 'buefy/dist/buefy.css';
+import store from '@/store';
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -21,6 +22,7 @@ Vue.use(Buefy, {
   defaultIconComponent: 'vue-fontawesome',
   defaultIconPack: 'fas'
 });
+Vue.use(VueScrollTo);
 
 Vue.config.productionTip = false;
 
