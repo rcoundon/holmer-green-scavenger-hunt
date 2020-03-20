@@ -22,19 +22,19 @@
     </div>
   </div>
   <b-modal :active.sync="isCardModalActive" :width="640" scroll="keep">
-            <div class="card" style="text-align: center">
-                <div style="display: flex">
-                    <!-- <figure class=""> -->
-                        <img :src="successImage" alt="Yoda">
-                    <!-- </figure> -->
-                    <div class="card-content">
-                        <div class="content is-size-4">
-                            Impressive, your knowledge of Holmer Green is. This community is better for having you in it.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </b-modal>
+    <div class="card">
+      <div style="display: flex">
+        <!-- <figure class=""> -->
+        <img :src="successImage" alt="Yoda" style="width:70em">
+        <!-- </figure> -->
+        <div class="card-content">
+          <div class="content is-size-4">
+            Impressive, your knowledge of Holmer Green is.  Thank you for taking part!
+          </div>
+        </div>
+      </div>
+    </div>
+  </b-modal>
 </div>
 </template>
 
