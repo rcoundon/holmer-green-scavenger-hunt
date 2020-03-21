@@ -5,7 +5,7 @@
       <p class="title has-text-weight-bold is-size-3 has-text-primary">
         {{heading}}
       </p>
-      <div v-html="subheading" class="is-size-4 has-text-weight-bold instructions has-text-primary">
+      <div v-html="subheading" class="is-size-5 has-text-weight-bold instructions has-text-primary">
       </div>
       <br/>
     </div>
@@ -60,12 +60,17 @@ export default {
 }
 
 .title {
-  border-radius: 5px;
+  border-radius: 10px;
   background: whitesmoke;
+  width: 80vw;
+  margin: auto;
 }
 
 .instructions {
   padding: 0 2em;
-  background: white;
+  background: whitesmoke;
+  width: 80vw;
+  margin: auto;
+  border-radius: 10px;
 }
 </style>

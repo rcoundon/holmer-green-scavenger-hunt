@@ -4,7 +4,9 @@
   <div class="tile" style="min-height: 100vh">
     <div class="tile is-vertical is-parent">
       <div class="tile is-child box question-box" v-for="question in questions" :key="question.id">
-        <img v-if="question.image" :src="getImageUrl(question)" style="max-height: 15rem"/>
+        <div style="text-align: center">
+          <img v-if="question.image" :src="getImageUrl(question)" style="margin: auto; max-height: 15rem"/>
+        </div>
         <p class="has-text-weight-semibold">{{ question.id}}: {{question.text }}</p>
         <b-field>
           <b-input placeholder="Enter your answer" v-model="form[question.id]"/>
