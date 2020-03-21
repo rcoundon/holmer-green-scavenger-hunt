@@ -1,13 +1,13 @@
 <template>
 <div>
-    <p id="top-answers" class="is-size-3 has-text-weight-semibold count" :class="successClass">
-      {{numberCorrect}} out of {{totalQuestions}}
-    </p>
+  <div class="is-size-2 has-text-weight-semibold count" :class="successClass">
+    {{numberCorrect}} out of {{totalQuestions}}
+  </div>
   <div class="tile" style="min-height: 100vh">
     <div class="tile is-vertical is-parent">
       <div class="tile is-child box question-box" v-for="question in questions" :key="question.id">
-        <img v-if="question.image" :src="getImageUrl(question)"/>
-        <span class="has-text-weight-semibold">{{ question.id}}: {{question.text }}</span>
+        <img v-if="question.image" :src="getImageUrl(question)" style="max-height: 15rem"/>
+        <p class="has-text-weight-semibold">{{ question.id}}: {{question.text }}</p>
         <b-field>
           <b-input placeholder="Enter your answer" v-model="form[question.id]"/>
         </b-field>
@@ -16,9 +16,9 @@
       <div class="grouped buttons tile" style="margin: auto;">
         <b-button icon-left="exclamation-triangle" class="is-danger" @click="clearAnswers()">Clear all answers</b-button>
       </div>
-    <p class="is-size-2 has-text-weight-semibold count" :class="successClass">
-      {{numberCorrect}} out of {{totalQuestions}}
-    </p>
+      <div class="is-size-2 has-text-weight-semibold count" :class="successClass">
+        {{numberCorrect}} out of {{totalQuestions}}
+      </div>
     </div>
   </div>
   <b-modal :active.sync="isCardModalActive" :width="640" scroll="keep">
@@ -129,12 +129,12 @@ export default {
 }
 
 .count {
-  padding: 3rem;
-  margin-top: 2rem;
+  margin: auto;
   background-color: white;
-  border-radius: 2%;
+  border-radius: 10px;
   align-content: center;
   justify-items: center;
+  width: 20rem;
 }
 
 .count-success {

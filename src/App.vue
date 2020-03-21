@@ -7,6 +7,7 @@
       </p>
       <div v-html="subheading" class="is-size-4 has-text-weight-bold instructions has-text-primary">
       </div>
+      <br/>
     </div>
     <main-page/>
   </div>
@@ -35,14 +36,14 @@ export default {
     }
   },
   created() {
-    this.$buefy.dialog.alert({
-      title: "Join the hunt!",
-      message:
-        "Mel & Ross hope you enjoy playing our little scavenger hunt around Holmer Green",
-      confirmText: "Let's do this!",
-      hasIcon: true,
-      icon: "treasure-chest"
-    });
+    // this.$buefy.dialog.alert({
+    //   title: "Join the hunt!",
+    //   message:
+    //     "Mel & Ross hope you enjoy playing our little scavenger hunt around Holmer Green",
+    //   confirmText: "Let's do this!",
+    //   hasIcon: true,
+    //   icon: "treasure-chest"
+    // });
   }
 };
 </script>

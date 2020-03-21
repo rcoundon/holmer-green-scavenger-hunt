@@ -17,6 +17,7 @@
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "buefy": "^0.8.13",
     "bulma": "^0.8.0",
+    "compression-webpack-plugin": "^3.1.0",
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
     "vue-scrollto": "^2.17.1",
@@ -30,6 +31,7 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-plugin-vue": "^6.2.2",
+    "imagemin-webpack-plugin": "^2.4.2",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
