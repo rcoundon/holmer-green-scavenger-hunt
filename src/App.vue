@@ -47,8 +47,8 @@ export default {
     this.$buefy.dialog.alert({
       title: "Join the hunt!",
       message:
-        "Mel & Ross hope you enjoy playing our little scavenger hunt around Holmer Green",
-      confirmText: "Let's do this!",
+        "Mel & Ross hope you enjoy playing our little clue trail around Holmer Green",
+      confirmText: "Let's go!",
       hasIcon: true,
       icon: "treasure-chest"
     });
