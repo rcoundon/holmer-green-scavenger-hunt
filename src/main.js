@@ -11,10 +11,18 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faTreasureChest,
   faExclamationTriangle,
-  faCheckCircle
+  faCheckCircle,
+  faSadTear,
+  faSmileBeam
 } from '@fortawesome/pro-solid-svg-icons';
 
-library.add([faTreasureChest, faExclamationTriangle, faCheckCircle]);
+library.add([
+  faTreasureChest,
+  faExclamationTriangle,
+  faCheckCircle,
+  faSadTear,
+  faSmileBeam
+]);
 
 Vue.component('vue-fontawesome', FontAwesomeIcon);
 

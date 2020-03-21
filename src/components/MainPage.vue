@@ -1,8 +1,6 @@
 <template>
 <div>
-  <div class="is-size-2 has-text-weight-semibold count" :class="successClass">
-    {{numberCorrect}} out of {{totalQuestions}}
-  </div>
+  <count id="top-answers" :allRight="allRight" :totalQuestions="totalQuestions" :numberCorrect="numberCorrect" ></count>
   <div class="tile" style="min-height: 100vh">
     <div class="tile is-vertical is-parent">
       <div class="tile is-child box question-box" v-for="question in questions" :key="question.id">
@@ -16,9 +14,7 @@
       <div class="grouped buttons tile" style="margin: auto;">
         <b-button icon-left="exclamation-triangle" class="is-danger" @click="clearAnswers()">Clear all answers</b-button>
       </div>
-      <div class="is-size-2 has-text-weight-semibold count" :class="successClass">
-        {{numberCorrect}} out of {{totalQuestions}}
-      </div>
+      <count :allRight="allRight" :totalQuestions="totalQuestions" :numberCorrect="numberCorrect" ></count>
     </div>
   </div>
   <b-modal :active.sync="isCardModalActive" :width="640" scroll="keep">
@@ -41,8 +37,12 @@
 <script>
 import config from "../../data/config";
 import { mapGetters } from "vuex";
+import Count from "./Count";
 
 export default {
+  components: {
+    Count
+  },
   data: () => {
     return {
       config,
@@ -61,9 +61,6 @@ export default {
     },
     successMessage() {
       return this.config.success;
-    },
-    successClass() {
-      return !this.allRight ? "count-failure" : "count-success";
     },
     allRight() {
       return this.numberCorrect === this.totalQuestions;
@@ -126,22 +123,5 @@ export default {
 .question-box {
   opacity: 1;
   text-align: left;
-}
-
-.count {
-  margin: auto;
-  background-color: white;
-  border-radius: 10px;
-  align-content: center;
-  justify-items: center;
-  width: 20rem;
-}
-
-.count-success {
-  color: green;
-}
-
-.count-failure {
-  color: red;
 }
 </style>
