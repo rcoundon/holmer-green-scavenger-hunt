@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from "vuex";
 import MainPage from "./components/MainPage";
 import config from "../data/config";
 
@@ -28,6 +29,7 @@ export default {
     };
   },
   computed: {
+    ...mapGetters(["shownFirstPopup"]),
     heading() {
       return this.config.heading;
     },
@@ -35,15 +37,22 @@ export default {
       return this.config.subheading;
     }
   },
+  methods: {
+    ...mapActions(["storeShownFirstPopup"])
+  },
   created() {
-    // this.$buefy.dialog.alert({
-    //   title: "Join the hunt!",
-    //   message:
-    //     "Mel & Ross hope you enjoy playing our little scavenger hunt around Holmer Green",
-    //   confirmText: "Let's do this!",
-    //   hasIcon: true,
-    //   icon: "treasure-chest"
-    // });
+    if (this.shownFirstPopup) {
+      return;
+    }
+    this.$buefy.dialog.alert({
+      title: "Join the hunt!",
+      message:
+        "Mel & Ross hope you enjoy playing our little scavenger hunt around Holmer Green",
+      confirmText: "Let's do this!",
+      hasIcon: true,
+      icon: "treasure-chest"
+    });
+    this.storeShownFirstPopup(true);
   }
 };
 </script>
