@@ -3,14 +3,10 @@
     <div>
       <br/>
       <p class="title has-text-weight-bold is-size-3 has-text-primary">
-        Welcome to the Holmer Green coronavirus distraction scavenger hunt
+        {{heading}}
       </p>
       <p class="is-size-4 has-text-weight-bold instructions has-text-primary">
-        Below is a list of questions that will take you on a little tour of our lovely village.
-        <br/>
-        All the answers consist of one or two words, or a number (enter 4 not four)
-        <br/>
-        To save your answers and check how many you have right, just tap a Check Answers button.  Have fun!
+        {{subheading}}
       </p>
     </div>
     <main-page/>
@@ -19,11 +15,25 @@
 
 <script>
 import MainPage from "./components/MainPage";
+import config from "../data/config";
 
 export default {
   name: "App",
   components: {
     MainPage
+  },
+  data() {
+    return {
+      config
+    };
+  },
+  computed: {
+    heading() {
+      return this.config.heading;
+    },
+    subheading() {
+      return this.config.subheading;
+    }
   },
   created() {
     this.$buefy.dialog.alert({

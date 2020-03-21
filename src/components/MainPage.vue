@@ -29,7 +29,7 @@
         <!-- </figure> -->
         <div class="card-content">
           <div class="content is-size-4">
-            Impressive, your knowledge of Holmer Green is.  Thank you for taking part!
+            {{successMessage}}
           </div>
         </div>
       </div>
@@ -39,38 +39,28 @@
 </template>
 
 <script>
-import questions from "../../data/questions";
+import config from "../../data/config";
 import { mapGetters } from "vuex";
 
 export default {
   data: () => {
     return {
-      questions,
+      config,
       form: {},
       numberCorrect: 0,
       isCardModalActive: false
     };
   },
-  watch: {
-    allRight: {
-      handler: function(newVal) {
-        if (newVal) {
-          // this.$buefy.dialog.alert({
-          //   title: "Congratulations!",
-          //   message:
-          //     "Your knowledge of Holmer Green is impressive, you're a credit to society",
-          //   confirmText: "Close",
-          //   hasIcon: true,
-          //   icon: "treasure-chest"
-          // });
-        }
-      }
-    }
-  },
   computed: {
     ...mapGetters(["answers"]),
+    questions() {
+      return this.config.clues;
+    },
     totalQuestions() {
-      return questions.length;
+      return this.questions.length;
+    },
+    successMessage() {
+      return this.config.success;
     },
     successClass() {
       return !this.allRight ? "count-failure" : "count-success";
