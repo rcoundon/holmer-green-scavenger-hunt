@@ -5,9 +5,8 @@
       <p class="title has-text-weight-bold is-size-3 has-text-primary">
         {{heading}}
       </p>
-      <p class="is-size-4 has-text-weight-bold instructions has-text-primary">
-        {{subheading}}
-      </p>
+      <div v-html="subheading" class="is-size-4 has-text-weight-bold instructions has-text-primary">
+      </div>
     </div>
     <main-page/>
   </div>
