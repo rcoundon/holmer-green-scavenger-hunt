@@ -5,7 +5,7 @@
     <div class="tile is-vertical is-parent">
       <div class="tile is-child box question-box" v-for="question in questions" :key="question.id">
         <div style="text-align: center">
-          <img v-if="question.image" :src="getImageUrl(question)" style="margin: auto; max-height: 15rem"/>
+          <img v-if="question.image" :src="getImageUrl(question)" class="clue-image" style="margin: auto; max-height: 15rem"/>
         </div>
         <p class="has-text-weight-semibold">{{ question.id}}: {{question.text }}</p>
         <b-field>
@@ -125,5 +125,11 @@ export default {
 .question-box {
   opacity: 1;
   text-align: left;
+}
+
+.clue-image {
+  -webkit-box-shadow: 9px 10px 18px -4px rgba(194, 190, 194, 1);
+  -moz-box-shadow: 9px 10px 18px -4px rgba(194, 190, 194, 1);
+  box-shadow: 9px 10px 18px -4px rgba(194, 190, 194, 1);
 }
 </style>
