@@ -1,6 +1,6 @@
 <template>
     <div class="is-size-2 has-text-weight-semibold count" :class="successClass">
-      {{numberCorrect}} out of {{totalQuestions}}
+      {{numberCorrect}} correct out of {{totalQuestions}}
     <b-icon v-if="!allRight" icon="sad-tear"/>
     <b-icon v-else icon="smile-beam"/>
   </div>
@@ -33,7 +33,7 @@ export default {
   border-radius: 10px;
   align-content: center;
   justify-items: center;
-  width: 20rem;
+  width: 26rem;
 }
 .count-success {
   color: green;

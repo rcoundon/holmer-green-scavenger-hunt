@@ -9,7 +9,10 @@
       </div>
       <br/>
     </div>
+    <p class="instructions has-text-danger has-text-weight-semibold is-size-4">The current government advice on social distancing is detailed <a href="https://www.gov.uk/government/publications/covid-19-guidance-on-social-distancing-and-for-vulnerable-people/guidance-on-social-distancing-for-everyone-in-the-uk-and-protecting-older-people-and-vulnerable-adults" target="_new"><b class="has-text-white is-italic has-text-success">here</b></a></p>
+    <br/>
     <main-page/>
+    <p class="has-text-white has-text-weight-semibold is-size-4">The current government advice on social distancing is detailed <a href="https://www.gov.uk/government/publications/covid-19-guidance-on-social-distancing-and-for-vulnerable-people/guidance-on-social-distancing-for-everyone-in-the-uk-and-protecting-older-people-and-vulnerable-adults" target="_new"><b class="has-text-white is-italic has-text-success">here</b></a></p>
   </div>
 </template>
 
