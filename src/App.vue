@@ -41,14 +41,14 @@ export default {
     ...mapActions(["storeShownFirstPopup"])
   },
   created() {
-    // if (this.shownFirstPopup) {
-    //   return;
-    // }
+    if (this.shownFirstPopup) {
+      return;
+    }
     this.$buefy.dialog.alert({
       title: "Join the hunt!",
       message: `Mel & Ross hope you enjoy playing our little clue trail around Holmer Green.<br><br>
       <b>Before taking part</b> you must familiarise yourself with and observe the current
-        government advice on social distancing before taking part.
+        government advice on social distancing.
         <br>
         <br>
         The govern advice is detailed <a href="https://www.gov.uk/government/publications/covid-19-guidance-on-social-distancing-and-for-vulnerable-people/guidance-on-social-distancing-for-everyone-in-the-uk-and-protecting-older-people-and-vulnerable-adults" target="_new"><b class="has-text-info">here</b></a>`,
