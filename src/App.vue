@@ -51,7 +51,7 @@ export default {
         government advice on social distancing.
         <br>
         <br>
-        The govern advice is detailed <a href="https://www.gov.uk/government/publications/covid-19-guidance-on-social-distancing-and-for-vulnerable-people/guidance-on-social-distancing-for-everyone-in-the-uk-and-protecting-older-people-and-vulnerable-adults" target="_new"><b class="has-text-info">here</b></a>`,
+        The government advice is detailed <a href="https://www.gov.uk/government/publications/covid-19-guidance-on-social-distancing-and-for-vulnerable-people/guidance-on-social-distancing-for-everyone-in-the-uk-and-protecting-older-people-and-vulnerable-adults" target="_new"><b class="has-text-info">here</b></a>`,
       confirmText: "Let's go!",
       hasIcon: true,
       icon: "treasure-chest"
