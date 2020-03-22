@@ -1,6 +1,8 @@
 <template>
 <div>
   <count id="top-answers" :allRight="allRight" :totalQuestions="totalQuestions" :numberCorrect="numberCorrect" ></count>
+  <elapsed-time :start="timerRunning"></elapsed-time>
+  <b-button class="is-info" @click="timerRunning = !timerRunning">{{ timerRunning ? 'Pause Timer' : 'Start Timer' }}</b-button>
   <div class="tile" style="min-height: 100vh">
     <div class="tile is-vertical is-parent">
       <div class="tile is-child box question-box" v-for="question in questions" :key="question.id">
@@ -15,6 +17,7 @@
       </div>
       <div class="grouped buttons tile" style="margin: auto;">
         <b-button icon-left="exclamation-triangle" class="is-danger" @click="clearAnswers()">Clear all answers</b-button>
+
       </div>
       <count :allRight="allRight" :totalQuestions="totalQuestions" :numberCorrect="numberCorrect" ></count>
     </div>
@@ -40,17 +43,20 @@
 import config from "../../data/config";
 import { mapGetters } from "vuex";
 import Count from "./Count";
+import ElapsedTime from "./ElapsedTime";
 
 export default {
   components: {
-    Count
+    Count,
+    ElapsedTime
   },
   data: () => {
     return {
       config,
       form: {},
       numberCorrect: 0,
-      isCardModalActive: false
+      isCardModalActive: false,
+      timerRunning: false
     };
   },
   computed: {
