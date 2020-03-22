@@ -1,7 +1,7 @@
 {
   "heading": "Welcome to the Holmer Green village clue trail",
   "subheading": "Below is a list of clues that will take you on a little walking tour of our lovely village.<br/> All the answers consist of up to three words or a number (enter 4 not four).<br/> To save your answers and check how many you have right, just tap a Check Answers button.  <br/><p style=\"padding-top: 1rem\">The trail begins at the junction of Sawpit Hill/Watchet Lane and Wycombe Road and runs in a loop (about 2.5km).</p><p style=\"padding-top:1rem\">Have fun and please respectfully maintain a safe distance from other members of the general public!</p>",
-  "success": "You did it!",
+  "success": "Completed the trail you have! Strong the village is with you in it!",
   "clues": [
     {
       "id": "1",
