@@ -16,6 +16,8 @@ import {
   faSmileBeam
 } from '@fortawesome/pro-solid-svg-icons';
 
+import router from './router'
+
 library.add([
   faTreasureChest,
   faExclamationTriangle,
@@ -36,5 +38,6 @@ Vue.config.productionTip = false;
 
 new Vue({
   render: h => h(App),
+  router,
   store
 }).$mount('#app');
