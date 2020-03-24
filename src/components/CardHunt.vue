@@ -55,7 +55,9 @@ export default {
         return answer.street;
       });
       const uniqueStreets = new Set(streets);
-      return Array.from(uniqueStreets);
+      let uniqueStreetsArray = Array.from(uniqueStreets);
+      uniqueStreetsArray = uniqueStreetsArray.sort();
+      return uniqueStreetsArray;
     },
     allocatedCards() {
       return this.config.cardTrail.answers.reduce((acc, curr) => {
