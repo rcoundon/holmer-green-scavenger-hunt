@@ -1,5 +1,7 @@
 <template>
   <div class="container is-mobile">
+    <p>Note: out of <b class="has-text-primary">52</b> cards, <b class="has-text-success">{{ allocatedCards }}</b> have currently been allocated</p>
+    <br/>
     <p class="is-centered has-text-weight-semibold has-text-primary">You have collected {{totalCards}} {{cardWord}} and {{ totalCardsCorrect }} {{successCardWord}} correct</p>
     <br/>
     <b-field grouped position="is-centered">
@@ -11,14 +13,17 @@
       </b-field>
     </b-field>
 
-    <card-tile v-for="card in cards"
-      :id="card.id"
-      :value="card.value"
-      :suit="card.suit"
-      :street="card.street"
-      :key="card.id"
-      @saveCard="createSavedCard"
-      @deleteCard="deleteSavedCard"/>
+    <div v-for="card in cards" :key="card.id">
+      <card-tile
+        :id="card.id"
+        :value="card.value"
+        :suit="card.suit"
+        :street="card.street"
+        :streets="streets"
+        @saveCard="createSavedCard"
+        @deleteCard="deleteSavedCard"/>
+        <hr style="padding: 0; margin-left: auto; margin-right: auto; width: 70vw">
+    </div>
   </div>
 </template>
 
@@ -44,6 +49,21 @@ export default {
     },
     successCardWord() {
       return this.getAre(this.totalCardsCorrect);
+    },
+    streets() {
+      const streets = this.config.cardTrail.answers.map(answer => {
+        return answer.street;
+      });
+      const uniqueStreets = new Set(streets);
+      return Array.from(uniqueStreets);
+    },
+    allocatedCards() {
+      return this.config.cardTrail.answers.reduce((acc, curr) => {
+        if (curr.street !== "UNALLOCATED") {
+          return acc + 1;
+        }
+        return acc;
+      }, 0);
     }
   },
   methods: {

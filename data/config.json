@@ -136,14 +136,264 @@
   "cardTrail": {
     "answers": [
       {
+        "street": "Brains Rd",
+        "value": "Ace",
+        "suit": "Clubs"
+      },
+      {
+        "street": "Winters Way",
+        "value": "2",
+        "suit": "Clubs"
+      },
+      {
+        "street": "Harnes Way",
+        "value": "3",
+        "suit": "Clubs"
+      },
+      {
+        "street": "Brains Rd",
+        "value": "4",
+        "suit": "Clubs"
+      },
+      {
+        "street": "Pond Approach",
+        "value": "5",
+        "suit": "Clubs"
+      },
+      {
         "street": "Heath Close",
+        "value": "6",
+        "suit": "Clubs"
+      },
+      {
+        "street": "UNALLOCATED",
+        "value": "7",
+        "suit": "Clubs"
+      },
+      {
+        "street": "Wycombe Rd",
+        "value": "8",
+        "suit": "Clubs"
+      },
+      {
+        "street": "UNALLOCATED",
+        "value": "9",
+        "suit": "Clubs"
+      },
+      {
+        "street": "Watchet Lane",
+        "value": "10",
+        "suit": "Clubs"
+      },
+      {
+        "street": "Orchard Way",
+        "value": "Jack",
+        "suit": "Clubs"
+      },
+      {
+        "street": "Watchet Lane",
+        "value": "Queen",
+        "suit": "Clubs"
+      },
+      {
+        "street": "Watchet Lane",
+        "value": "King",
+        "suit": "Clubs"
+      },
+      {
+        "street": "Heath Close",
+        "value": "Ace",
+        "suit": "Spades"
+      },
+      {
+        "street": "Weathercock Gdns",
+        "value": "2",
+        "suit": "Spades"
+      },
+      {
+        "street": "Forge Close",
+        "value": "3",
+        "suit": "Spades"
+      },
+      {
+        "street": "Pond Approach",
+        "value": "4",
+        "suit": "Spades"
+      },
+      {
+        "street": "Pheasants Drive",
+        "value": "5",
+        "suit": "Spades"
+      },
+      {
+        "street": "Forge Close",
+        "value": "6",
+        "suit": "Spades"
+      },
+      {
+        "street": "Gurneys Meadow",
+        "value": "7",
+        "suit": "Spades"
+      },
+      {
+        "street": "Beech Tree Rd",
+        "value": "8",
+        "suit": "Spades"
+      },
+      {
+        "street": "Forge Close",
+        "value": "9",
+        "suit": "Spades"
+      },
+      {
+        "street": "Hogg Lane",
+        "value": "10",
+        "suit": "Spades"
+      },
+      {
+        "street": "Heath Close",
+        "value": "Jack",
+        "suit": "Spades"
+      },
+      {
+        "street": "Gables Meadow",
+        "value": "Queen",
+        "suit": "Spades"
+      },
+      {
+        "street": "Pond Approach",
+        "value": "King",
+        "suit": "Spades"
+      },
+      {
+        "street": "Harries Way",
+        "value": "Ace",
+        "suit": "Hearts"
+      },
+      {
+        "street": "Sheepcote Dell Rd",
+        "value": "2",
+        "suit": "Hearts"
+      },
+      {
+        "street": "Winters Way",
+        "value": "3",
+        "suit": "Hearts"
+      },
+      {
+        "street": "UNALLOCATED",
         "value": "4",
         "suit": "Hearts"
       },
       {
-        "street": "Brackley Road",
+        "street": "Winters Way",
+        "value": "5",
+        "suit": "Hearts"
+      },
+      {
+        "street": "Earl Howe Rd",
+        "value": "6",
+        "suit": "Hearts"
+      },
+      {
+        "street": "UNALLOCATED",
+        "value": "7",
+        "suit": "Hearts"
+      },
+      {
+        "street": "New Pond Rd",
+        "value": "8",
+        "suit": "Hearts"
+      },
+      {
+        "street": "Fox Rd",
+        "value": "9",
+        "suit": "Hearts"
+      },
+      {
+        "street": "Earl Howe Rd",
+        "value": "10",
+        "suit": "Hearts"
+      },
+      {
+        "street": "Glebe Close",
+        "value": "Jack",
+        "suit": "Hearts"
+      },
+      {
+        "street": "Sheepcote Dell Rd",
+        "value": "Queen",
+        "suit": "Hearts"
+      },
+      {
+        "street": "Parish Piece",
+        "value": "King",
+        "suit": "Hearts"
+      },
+      {
+        "street": "Forge Close",
         "value": "Ace",
-        "suit": "Spades"
+        "suit": "Diamonds"
+      },
+      {
+        "street": "UNALLOCATED",
+        "value": "2",
+        "suit": "Diamonds"
+      },
+      {
+        "street": "UNALLOCATED",
+        "value": "3",
+        "suit": "Diamonds"
+      },
+      {
+        "street": "UNALLOCATED",
+        "value": "4",
+        "suit": "Diamonds"
+      },
+      {
+        "street": "UNALLOCATED",
+        "value": "5",
+        "suit": "Diamonds"
+      },
+      {
+        "street": "UNALLOCATED",
+        "value": "6",
+        "suit": "Diamonds"
+      },
+      {
+        "street": "UNALLOCATED",
+        "value": "7",
+        "suit": "Diamonds"
+      },
+      {
+        "street": "UNALLOCATED",
+        "value": "8",
+        "suit": "Diamonds"
+      },
+      {
+        "street": "UNALLOCATED",
+        "value": "9",
+        "suit": "Diamonds"
+      },
+      {
+        "street": "Gurneys Meadow",
+        "value": "10",
+        "suit": "Diamonds"
+      },
+      {
+        "street": "School Close",
+        "value": "Jack",
+        "suit": "Diamonds"
+      },
+      {
+        "street": "School Close",
+        "value": "Queen",
+        "suit": "Diamonds"
+      },
+      {
+        "street": "Fox Lane",
+        "value": "King",
+        "suit": "Diamonds"
       }
     ]
   }

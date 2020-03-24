@@ -1,36 +1,36 @@
 <template>
-  <div>
-    <b-field grouped position="is-centered">
+  <div class="playing-card">
+    <b-field position="is-centered">
+      <b-select placeholder="Select a value" v-model="localValue">
+        <option
+          v-for="value in values"
+          :value="value"
+          :key="value">
+          {{ value}}
+        </option>
+      </b-select>
+      <b-select placeholder="Select a suit" v-model="localSuit">
+        <option
+          v-for="suit in suits"
+          :value="suit"
+          :key="suit">
+          {{ suit }}
+        </option>
+      </b-select>
       <b-field>
-        <b-select placeholder="Select a value" v-model="localValue">
-          <option
-            v-for="value in values"
-            :value="value"
-            :key="value">
-            {{ value}}
-          </option>
-        </b-select>
-        <b-select placeholder="Select a suit" v-model="localSuit">
-          <option
-            v-for="suit in suits"
-            :value="suit"
-            :key="suit">
-            {{ suit }}
-          </option>
-        </b-select>
-        <b-select placeholder="Select a street" v-model="localStreet">
-          <option
-            v-for="street in streets"
-            :value="street"
-            :key="street">
-            {{ street }}
-          </option>
-        </b-select>
-      </b-field>
-      <b-field grouped>
-        <b-field>
         <b-button :disabled="disableSave" type="is-primary" @click="saveCard">Save</b-button>
-        </b-field>
+      </b-field>
+    </b-field>
+    <b-field position="is-centered">
+      <b-select placeholder="Select a street" v-model="localStreet">
+        <option
+          v-for="street in streets"
+          :value="street"
+          :key="street">
+          {{ street }}
+        </option>
+      </b-select>
+      <b-field>
         <b-field>
           <b-button type="is-danger" @click="deleteCard">Delete</b-button>
         </b-field>
@@ -57,6 +57,10 @@ export default {
     id: {
       type: Number,
       required: true
+    },
+    streets: {
+      type: Array,
+      required: true
     }
   },
   data() {
@@ -76,7 +80,6 @@ export default {
         "King"
       ],
       suits: ["Hearts", "Diamonds", "Spades", "Clubs"],
-      streets: ["Heath Close", "Brackley Road", "Earl Howe Road"],
       localSuit: undefined,
       localValue: undefined,
       localStreet: undefined
@@ -130,4 +133,7 @@ export default {
 </script>
 
 <style>
+.playing-card {
+  margin-bottom: 2em;
+}
 </style>
