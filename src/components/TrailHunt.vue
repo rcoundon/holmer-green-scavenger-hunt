@@ -56,13 +56,13 @@ export default {
   computed: {
     ...mapGetters(["answers"]),
     questions() {
-      return this.config.clues;
+      return this.config.clueHunt.clues;
     },
     totalQuestions() {
       return this.questions.length;
     },
     successMessage() {
-      return this.config.success;
+      return this.config.clueHunt.success;
     },
     allRight() {
       return this.numberCorrect === this.totalQuestions;

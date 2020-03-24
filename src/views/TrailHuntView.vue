@@ -34,10 +34,10 @@ export default {
   computed: {
     ...mapGetters(["shownFirstPopup"]),
     heading() {
-      return this.config.heading;
+      return this.config.clueHunt.heading;
     },
     subheading() {
-      return this.config.subheading;
+      return this.config.clueHunt.subheading;
     }
   },
   methods: {

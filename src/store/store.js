@@ -4,7 +4,8 @@ export const state = {
   answers: {},
   shownFirstPopup: false,
   cards: [],
-  cardId: 0
+  cardId: 0,
+  totalCardsCorrect: 0
 };
 
 export const mutations = {
@@ -35,8 +36,17 @@ export const mutations = {
       state.cards.push(card);
     }
   },
+  DELETE_CARD(state, cardId) {
+    const cardsWithThisOneRemoved = state.cards.filter(card => {
+      return card.id !== cardId;
+    });
+    state.cards = cardsWithThisOneRemoved;
+  },
   INCREMENT_ID(state) {
     state.cardId++;
+  },
+  STORE_CARDS_CORRECT_TOTAL(state, total) {
+    state.totalCardsCorrect = total;
   }
 };
 
@@ -51,9 +61,15 @@ export const actions = {
   storeCard({ commit }, payload) {
     commit('STORE_CARD', payload);
   },
+  deleteCard({ commit }, payload) {
+    commit('DELETE_CARD', payload);
+  },
   getCardId({ commit, state }) {
     commit('INCREMENT_ID');
     return state.cardId;
+  },
+  storeTotalCardsCorrect({ commit }, total) {
+    commit('STORE_CARDS_CORRECT_TOTAL', total);
   }
 };
 
@@ -67,5 +83,6 @@ export const getters = {
       return card.saved;
     });
     return savedCards.length;
-  }
+  },
+  totalCardsCorrect: state => state.totalCardsCorrect
 };

@@ -1,134 +1,150 @@
 {
-  "heading": "Welcome to the Holmer Green village clue trail",
-  "subheading": "Below is a list of clues that will take you on a little walking tour of our lovely village.<br/> All the answers consist of up to three words or a number (enter 4 not four).<br/> To save your answers and check how many you have right, just tap a Check Answers button.  <br/><p style=\"padding-top: 1rem\">The trail begins at the junction of Sawpit Hill/Watchet Lane and Wycombe Road and runs in a loop (about 2.5km).</p><p style=\"padding-top:1rem\">Have fun and and observe government advice on social distancing</p>",
-  "success": "Completed the trail you have! Strong the village is with you in it!",
-  "clues": [
-    {
-      "id": "1",
-      "text": "Add up all the distances on the signs at the junction",
-      "answer": "10.5",
-      "image": ""
-    },
-    {
-      "id": "2",
-      "text": "Heading along Wycombe Road, what is the street number of the business for which this forms part of the logo?",
-      "answer": "22",
-      "image": "q2.jpg"
-    },
-    {
-      "id": "3",
-      "text": "What type of road is Dean Way?",
-      "answer": "cul-de-sac"
-    },
-    {
-      "id": "4",
-      "text": "What is the phone number (no spaces) for the business that uses this logo?",
-      "answer": "01494490121",
-      "image": "q4.jpg"
-    },
-    {
-      "id": "5",
-      "text": "What is the second word of the street name?",
-      "answer": "Drive",
-      "image": "q5.jpg"
-    },
-    {
-      "id": "6",
-      "text": "What's the phone number (no spaces) for the business that uses this in its logo?",
-      "answer": "01494713185",
-      "image": "q6.jpg"
-    },
-    {
-      "id": "7",
-      "text": "Who does the fox remember?",
-      "answer": "Gill"
-    },
-    {
-      "id": "8",
-      "text": "Multiply the number of these flower beds by the number of duck houses",
-      "answer": "8",
-      "image": "q8.jpg"
-    },
-    {
-      "id": "9",
-      "text": "What region does this give you a taste of?",
-      "answer": "Bengal",
-      "image": "q10.jpg"
-    },
-    {
-      "id": "10",
-      "text": "What's the first word in the business name that is at this address?",
-      "answer": "Airedale",
-      "image": "q9.jpg"
-    },
-    {
-      "id": "11",
-      "text": "Before you cross the road to the pond, cherry pick the number of nines",
-      "answer": "4"
-    },
-    {
-      "id": "12",
-      "text": "Subtract the distance to Gt Kingshill from the distance to Little Missenden",
-      "answer": "0"
-    },
-    {
-      "id": "13",
-      "text": "How old is Holmer Green now?",
-      "answer": "812"
-    },
-    {
-      "id": "14",
-      "text": "Carefully cross over on to New Pond Road.  What are the initials of this building?",
-      "answer": "RH",
-      "image": "q14.jpg"
-    },
-    {
-      "id": "16",
-      "text": "What adjective is used in the name of this public house?",
-      "answer": "old",
-      "image": "q15.jpg"
-    },
-    {
-      "id": "17",
-      "text": "Turn left on to Beech Tree Road. How many r's are in the name of the owners of this building?",
-      "answer": "4",
-      "image": "q16.jpg"
-    },
-    {
-      "id": "18",
-      "text": "Pull or push?",
-      "answer": "Pull",
-      "image": "q17.jpg"
-    },
-    {
-      "id": "19",
-      "text": "What's missing from this picture?",
-      "answer": "Bike",
-      "image": "q18.jpg"
-    },
-    {
-      "id": "20",
-      "text": "Turn left on to Watchet Lane. Which flowers look after children here?",
-      "answer": "Poppies",
-      "image": "q19.jpg"
-    },
-    {
-      "id": "21",
-      "text": "What's missing from this sign?",
-      "answer": "Scooter",
-      "image": "q20.jpg"
-    },
-    {
-      "id": "22",
-      "text": "How many sports are mentioned on the sign that features this?",
-      "answer": "8",
-      "image": "q21.jpg"
-    },
-    {
-      "id": "23",
-      "text": "What is the house number by this?",
-      "answer": "58",
-      "image": "q22.jpg"
-    }
-  ]
+  "clueHunt": {
+    "heading": "Welcome to the Holmer Green village clue trail",
+    "subheading": "Below is a list of clues that will take you on a little walking tour of our lovely village.<br/> All the answers consist of up to three words or a number (enter 4 not four).<br/> To save your answers and check how many you have right, just tap a Check Answers button.  <br/><p style=\"padding-top: 1rem\">The trail begins at the junction of Sawpit Hill/Watchet Lane and Wycombe Road and runs in a loop (about 2.5km).</p><p style=\"padding-top:1rem\">Have fun and and observe government advice on social distancing</p>",
+    "success": "Completed the trail you have! Strong the village is with you in it!",
+    "clues": [
+      {
+        "id": "1",
+        "text": "Add up all the distances on the signs at the junction",
+        "answer": "10.5",
+        "image": ""
+      },
+      {
+        "id": "2",
+        "text": "Heading along Wycombe Road, what is the street number of the business for which this forms part of the logo?",
+        "answer": "22",
+        "image": "q2.jpg"
+      },
+      {
+        "id": "3",
+        "text": "What type of road is Dean Way?",
+        "answer": "cul-de-sac"
+      },
+      {
+        "id": "4",
+        "text": "What is the phone number (no spaces) for the business that uses this logo?",
+        "answer": "01494490121",
+        "image": "q4.jpg"
+      },
+      {
+        "id": "5",
+        "text": "What is the second word of the street name?",
+        "answer": "Drive",
+        "image": "q5.jpg"
+      },
+      {
+        "id": "6",
+        "text": "What's the phone number (no spaces) for the business that uses this in its logo?",
+        "answer": "01494713185",
+        "image": "q6.jpg"
+      },
+      {
+        "id": "7",
+        "text": "Who does the fox remember?",
+        "answer": "Gill"
+      },
+      {
+        "id": "8",
+        "text": "Multiply the number of these flower beds by the number of duck houses",
+        "answer": "8",
+        "image": "q8.jpg"
+      },
+      {
+        "id": "9",
+        "text": "What region does this give you a taste of?",
+        "answer": "Bengal",
+        "image": "q10.jpg"
+      },
+      {
+        "id": "10",
+        "text": "What's the first word in the business name that is at this address?",
+        "answer": "Airedale",
+        "image": "q9.jpg"
+      },
+      {
+        "id": "11",
+        "text": "Before you cross the road to the pond, cherry pick the number of nines",
+        "answer": "4"
+      },
+      {
+        "id": "12",
+        "text": "Subtract the distance to Gt Kingshill from the distance to Little Missenden",
+        "answer": "0"
+      },
+      {
+        "id": "13",
+        "text": "How old is Holmer Green now?",
+        "answer": "812"
+      },
+      {
+        "id": "14",
+        "text": "Carefully cross over on to New Pond Road.  What are the initials of this building?",
+        "answer": "RH",
+        "image": "q14.jpg"
+      },
+      {
+        "id": "16",
+        "text": "What adjective is used in the name of this public house?",
+        "answer": "old",
+        "image": "q15.jpg"
+      },
+      {
+        "id": "17",
+        "text": "Turn left on to Beech Tree Road. How many r's are in the name of the owners of this building?",
+        "answer": "4",
+        "image": "q16.jpg"
+      },
+      {
+        "id": "18",
+        "text": "Pull or push?",
+        "answer": "Pull",
+        "image": "q17.jpg"
+      },
+      {
+        "id": "19",
+        "text": "What's missing from this picture?",
+        "answer": "Bike",
+        "image": "q18.jpg"
+      },
+      {
+        "id": "20",
+        "text": "Turn left on to Watchet Lane. Which flowers look after children here?",
+        "answer": "Poppies",
+        "image": "q19.jpg"
+      },
+      {
+        "id": "21",
+        "text": "What's missing from this sign?",
+        "answer": "Scooter",
+        "image": "q20.jpg"
+      },
+      {
+        "id": "22",
+        "text": "How many sports are mentioned on the sign that features this?",
+        "answer": "8",
+        "image": "q21.jpg"
+      },
+      {
+        "id": "23",
+        "text": "What is the house number by this?",
+        "answer": "58",
+        "image": "q22.jpg"
+      }
+    ]
+  },
+  "cardTrail": {
+    "answers": [
+      {
+        "street": "Heath Close",
+        "value": "4",
+        "suit": "Hearts"
+      },
+      {
+        "street": "Brackley Road",
+        "value": "Ace",
+        "suit": "Spades"
+      }
+    ]
+  }
 }

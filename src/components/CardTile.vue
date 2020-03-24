@@ -10,8 +10,6 @@
             {{ value}}
           </option>
         </b-select>
-      </b-field>
-      <b-field>
         <b-select placeholder="Select a suit" v-model="localSuit">
           <option
             v-for="suit in suits"
@@ -20,8 +18,6 @@
             {{ suit }}
           </option>
         </b-select>
-      </b-field>
-      <b-field>
         <b-select placeholder="Select a street" v-model="localStreet">
           <option
             v-for="street in streets"
@@ -31,8 +27,13 @@
           </option>
         </b-select>
       </b-field>
-      <b-field>
+      <b-field grouped>
+        <b-field>
         <b-button :disabled="disableSave" type="is-primary" @click="saveCard">Save</b-button>
+        </b-field>
+        <b-field>
+          <b-button type="is-danger" @click="deleteCard">Delete</b-button>
+        </b-field>
       </b-field>
     </b-field>
   </div>
@@ -89,7 +90,27 @@ export default {
   computed: {
     disableSave() {
       return !(this.localSuit && this.localValue && this.localStreet);
+    },
+    isPictureCard() {
+      if (!this.localValue) return null;
+      const pictureCards = ["Jack", "Queen", "King"];
+      return pictureCards.includes(this.localValue);
     }
+    // valueIcon() {
+    //   if(this.isPictureCard) {
+    //     switch (this.value){
+    //       case 'King': {
+    //         return 'chess-king';
+    //       }
+    //       case 'Queen': {
+    //         return 'crown'
+    //       }
+    //       case 'Jack': {
+    //         return
+    //       }
+    //     }
+    //   }
+    // }
   },
   methods: {
     saveCard() {
@@ -100,6 +121,9 @@ export default {
         id: this.id
       };
       this.$emit("saveCard", card);
+    },
+    deleteCard() {
+      this.$emit("deleteCard", this.id);
     }
   }
 };
