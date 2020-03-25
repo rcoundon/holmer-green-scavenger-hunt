@@ -11,6 +11,9 @@
       <b-field>
         <b-button @click="checkAnswers" type="is-success">Check answers</b-button>
       </b-field>
+      <b-field>
+        <b-button @click="showStreetCounts" type="is-success">Show numbers for each street</b-button>
+      </b-field>
     </b-field>
 
     <div v-for="card in cards" :key="card.id">
@@ -31,6 +34,7 @@
 import { mapGetters, mapActions } from "vuex";
 import fastCopy from "fast-copy";
 import CardTile from "./CardTile";
+import StreetCounts from "./StreetCounts";
 import config from "../../data/config";
 
 export default {
@@ -39,7 +43,17 @@ export default {
   },
   data() {
     return {
-      config
+      config,
+      columns: [
+        {
+          label: "Street",
+          field: "street"
+        },
+        {
+          label: "Number of cards",
+          field: "count"
+        }
+      ]
     };
   },
   computed: {
@@ -58,6 +72,22 @@ export default {
       let uniqueStreetsArray = Array.from(uniqueStreets);
       uniqueStreetsArray = uniqueStreetsArray.sort();
       return uniqueStreetsArray;
+    },
+    streetCounts() {
+      const allStreetCounts = [];
+      this.streets.forEach(street => {
+        const streetCount = {
+          street,
+          count: 0
+        };
+        this.config.cardTrail.answers.forEach(answer => {
+          if (answer.street === street) {
+            streetCount.count++;
+          }
+        });
+        allStreetCounts.push(streetCount);
+      });
+      return allStreetCounts;
     },
     allocatedCards() {
       return this.config.cardTrail.answers.reduce((acc, curr) => {
@@ -116,6 +146,17 @@ export default {
         }
       });
       this.storeTotalCardsCorrect(total);
+    },
+    showStreetCounts() {
+      this.$buefy.modal.open({
+        parent: this,
+        component: StreetCounts,
+        trapFocus: true,
+        props: {
+          columns: this.columns,
+          streetCounts: this.streetCounts
+        }
+      });
     }
   }
 };
