@@ -1,5 +1,5 @@
 <template>
-  <b-table :data="streetCounts" :columns="columns">
+  <b-table sticky-header :data="streetCounts" :columns="columns">
   </b-table>
 </template>
 
