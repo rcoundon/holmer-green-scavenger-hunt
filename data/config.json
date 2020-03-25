@@ -221,7 +221,7 @@
         "suit": "Spades"
       },
       {
-        "street": "Pheasants Drive",
+        "street": "Pheasants Drive (Hazlemere)",
         "value": "5",
         "suit": "Spades"
       },
@@ -256,7 +256,7 @@
         "suit": "Spades"
       },
       {
-        "street": "Gables Meadow",
+        "street": "UNALLOCATED",
         "value": "Queen",
         "suit": "Spades"
       },
@@ -296,7 +296,7 @@
         "suit": "Hearts"
       },
       {
-        "street": "UNALLOCATED",
+        "street": "Cherry Way (Hazlemere)",
         "value": "7",
         "suit": "Hearts"
       },
@@ -346,7 +346,7 @@
         "suit": "Diamonds"
       },
       {
-        "street": "UNALLOCATED",
+        "street": "Heath Close",
         "value": "4",
         "suit": "Diamonds"
       },
