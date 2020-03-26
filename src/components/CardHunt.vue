@@ -11,9 +11,9 @@
       <b-field>
         <b-button @click="checkAnswers" type="is-success">Check answers</b-button>
       </b-field>
-      <b-field>
-        <b-button @click="showStreetCounts" type="is-success">Show numbers for each street</b-button>
-      </b-field>
+    </b-field>
+    <b-field>
+      <b-button @click="showStreetCounts" type="is-success">Show numbers for each street</b-button>
     </b-field>
 
     <div v-for="card in cards" :key="card.id">
