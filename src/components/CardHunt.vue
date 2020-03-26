@@ -12,7 +12,7 @@
         <b-button @click="checkAnswers" type="is-success">Check answers</b-button>
       </b-field>
     </b-field>
-    <b-field>
+    <b-field style="margin-top: -1em">
       <b-button @click="showStreetCounts" type="is-success">Show numbers for each street</b-button>
     </b-field>
 
