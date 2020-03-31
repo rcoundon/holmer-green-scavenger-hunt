@@ -166,7 +166,7 @@
         "suit": "Clubs"
       },
       {
-        "street": "UNALLOCATED",
+        "street": "Browns Rd",
         "value": "7",
         "suit": "Clubs"
       },
@@ -256,7 +256,7 @@
         "suit": "Spades"
       },
       {
-        "street": "UNALLOCATED",
+        "street": "Sheepcote Cottages",
         "value": "Queen",
         "suit": "Spades"
       },
@@ -336,7 +336,7 @@
         "suit": "Diamonds"
       },
       {
-        "street": "UNALLOCATED",
+        "street": "Watchet Lane",
         "value": "2",
         "suit": "Diamonds"
       },
@@ -356,12 +356,12 @@
         "suit": "Diamonds"
       },
       {
-        "street": "UNALLOCATED",
+        "street": "Penfold Cottages",
         "value": "6",
         "suit": "Diamonds"
       },
       {
-        "street": "UNALLOCATED",
+        "street": "Skimmers Field",
         "value": "7",
         "suit": "Diamonds"
       },
