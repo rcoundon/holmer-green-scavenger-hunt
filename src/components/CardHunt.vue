@@ -253,8 +253,8 @@ export default {
   border-width: 2px;
   border-color: rgb(160, 160, 160);
   border-radius: 10px;
-  margin-left: 1em;
-  margin-right: 1em;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
   margin-bottom: 1em;
 }
 </style>
