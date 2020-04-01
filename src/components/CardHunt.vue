@@ -16,32 +16,33 @@
     <b-field style="margin-top: -1em">
       <b-button @click="showStreetCounts" type="is-success">Show numbers for each street</b-button>
     </b-field>
-    <div class="jokers">
-    <joker
-        colour="Red"
-        :street="redJoker"
-        :streets="streets"
-        @saveJoker="saveJoker"
-        @deleteJoker="deleteJoker"/>
+    <div class="separator">
+      <joker
+          colour="Red"
+          :street="redJoker"
+          :streets="streets"
+          @saveJoker="saveJoker"
+          @deleteJoker="deleteJoker"/>
 
-    <joker
-        colour="Black"
-        :street="blackJoker"
-        :streets="streets"
-        @saveJoker="saveJoker"
-        @deleteJoker="deleteJoker"/>
+      <joker
+          colour="Black"
+          :street="blackJoker"
+          :streets="streets"
+          @saveJoker="saveJoker"
+          @deleteJoker="deleteJoker"/>
     </div>
-
-    <div v-for="card in cards" :key="card.id">
-      <card-tile
-        :id="card.id"
-        :value="card.value"
-        :suit="card.suit"
-        :street="card.street"
-        :streets="streets"
-        @saveCard="createSavedCard"
-        @deleteCard="deleteSavedCard"/>
-        <hr style="padding: 0; margin-left: auto; margin-right: auto; width: 70vw">
+    <div v-show="cards.length > 0" class="separator" style="padding-top:1em">
+      <div v-for="card in cards" :key="card.id">
+        <card-tile
+          :id="card.id"
+          :value="card.value"
+          :suit="card.suit"
+          :street="card.street"
+          :streets="streets"
+          @saveCard="createSavedCard"
+          @deleteCard="deleteSavedCard"/>
+          <hr style="padding: 0; margin-left: auto; margin-right: auto; width: 70vw">
+      </div>
     </div>
   </div>
 </template>
@@ -247,11 +248,11 @@ export default {
 </script>
 
 <style scoped>
-.jokers {
+.separator {
   border-style: solid;
-  border-width: 1px;
-  border-color: black;
-  /* padding: 0 2em 0em 2em; */
+  border-width: 2px;
+  border-color: rgb(160, 160, 160);
+  border-radius: 10px;
   margin-left: 1em;
   margin-right: 1em;
   margin-bottom: 1em;
