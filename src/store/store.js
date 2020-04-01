@@ -4,6 +4,8 @@ export const state = {
   answers: {},
   shownFirstPopup: false,
   cards: [],
+  blackJoker: '',
+  redJoker: '',
   cardId: 0,
   totalCardsCorrect: 0
 };
@@ -47,6 +49,14 @@ export const mutations = {
   },
   STORE_CARDS_CORRECT_TOTAL(state, total) {
     state.totalCardsCorrect = total;
+  },
+  STORE_RED_JOKER(state, payload) {
+    console.log('persisting red', payload);
+    state.redJoker = payload;
+  },
+  STORE_BLACK_JOKER(state, payload) {
+    console.log('persisting black', payload);
+    state.blackJoker = payload;
   }
 };
 
@@ -70,6 +80,14 @@ export const actions = {
   },
   storeTotalCardsCorrect({ commit }, total) {
     commit('STORE_CARDS_CORRECT_TOTAL', total);
+  },
+  storeRedJoker({ commit }, payload) {
+    console.log('store received', payload);
+    commit('STORE_RED_JOKER', payload);
+  },
+  storeBlackJoker({ commit }, payload) {
+    console.log('store received', payload);
+    commit('STORE_BLACK_JOKER', payload);
   }
 };
 
@@ -79,10 +97,16 @@ export const getters = {
   cards: state => state.cards,
   cardId: state => state.cardId,
   totalCards: state => {
+    let total = 0;
     const savedCards = state.cards.filter(card => {
       return card.saved;
     });
-    return savedCards.length;
+    total = savedCards.length;
+    if (state.redJoker) total++;
+    if (state.blackJoker) total++;
+    return total;
   },
-  totalCardsCorrect: state => state.totalCardsCorrect
+  totalCardsCorrect: state => state.totalCardsCorrect,
+  redJoker: state => state.redJoker,
+  blackJoker: state => state.blackJoker
 };

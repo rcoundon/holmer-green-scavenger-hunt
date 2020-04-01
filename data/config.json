@@ -134,6 +134,16 @@
     ]
   },
   "cardTrail": {
+    "jokers": [
+      {
+        "colour": "Red",
+        "street": "Earl Howe Rd"
+      },
+      {
+        "colour": "Black",
+        "street": "Parish Piece"
+      }
+    ],
     "answers": [
       {
         "street": "Browns Rd",
@@ -146,7 +156,7 @@
         "suit": "Clubs"
       },
       {
-        "street": "Harnes Way",
+        "street": "Harries Way",
         "value": "3",
         "suit": "Clubs"
       },
@@ -176,7 +186,7 @@
         "suit": "Clubs"
       },
       {
-        "street": "UNALLOCATED",
+        "street": "Beech Tree Rd",
         "value": "9",
         "suit": "Clubs"
       },

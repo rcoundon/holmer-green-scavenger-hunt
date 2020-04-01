@@ -100,21 +100,6 @@ export default {
       const pictureCards = ["Jack", "Queen", "King"];
       return pictureCards.includes(this.localValue);
     }
-    // valueIcon() {
-    //   if(this.isPictureCard) {
-    //     switch (this.value){
-    //       case 'King': {
-    //         return 'chess-king';
-    //       }
-    //       case 'Queen': {
-    //         return 'crown'
-    //       }
-    //       case 'Jack': {
-    //         return
-    //       }
-    //     }
-    //   }
-    // }
   },
   methods: {
     saveCard() {
@@ -133,7 +118,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .playing-card {
   margin-bottom: 2em;
 }
