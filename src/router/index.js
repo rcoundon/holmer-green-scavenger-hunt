@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import TrailHuntView from '../views/TrailHuntView';
 import CardHuntView from '../views/CardHuntView';
+import Delivery from '../views/Delivery';
 
 Vue.use(VueRouter);
 
@@ -15,6 +16,11 @@ const routes = [
     path: '/cardHunt',
     name: 'cardHunt',
     component: CardHuntView
+  },
+  {
+    path: '/delivery',
+    name: 'delivery',
+    component: Delivery
   },
   {
     path: '/about',
