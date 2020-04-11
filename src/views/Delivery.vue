@@ -1,11 +1,36 @@
 <template>
-  <div class="container">
+  <div>
     <p class="has-text-weight-semibold is-size-4" style="margin-bottom: 1em;">
       Holmer Green, local business deliveries
     </p>
+    <!-- <b-field grouped class="has-text-center">
+      <b-field> -->
+    <b-dropdown expanded aria-role="list" v-model="selectedCategory">
+      <button class="button is-primary" slot="trigger">
+        <span>Category</span>
+      </button>
+
+      <b-dropdown-item value="All" aria-role="listitem">All</b-dropdown-item>
+      <b-dropdown-item value="Food & Drink" aria-role="listitem"
+        >Food & Drink</b-dropdown-item
+      >
+      <b-dropdown-item value="Takeaway" aria-role="listitem"
+        >Takeaway</b-dropdown-item
+      >
+    </b-dropdown>
+    <!-- </b-field>
+      <b-field> -->
+    <p
+      class="is-size-4 has-text-primary has-text-weight-semibold"
+      style="margin: 1em 0em"
+    >
+      Selected Category: {{ selectedCategory }}
+    </p>
+    <!-- </b-field>
+    </b-field> -->
     <b-table
       :mobile-cards="true"
-      :data="tableData"
+      :data="filteredData"
       default-sort="Category"
       :paginated="true"
       :per-page="10"
@@ -25,6 +50,10 @@
         <b-table-column sortable searchable field="Website" label="Website">
           <a :href="props.row.Website">{{ props.row.Business }}</a>
         </b-table-column>
+        <b-table-column sortable searchable field="Email" label="Email">
+          <a :href="'mailTo:' + props.row.Email">{{ props.row.Email }}</a>
+        </b-table-column>
+
         <b-table-column
           sortable
           searchable
@@ -50,11 +79,36 @@ import data from "../lib/csvConverter";
 export default {
   data() {
     return {
-      tableData: []
+      tableData: [],
+      processedData: [],
+      selectedCategory: "All"
     };
   },
   created() {
     this.tableData = data;
+    this.processedData = this.tableData.map(row => {
+      return {
+        ...row,
+        Website: this.prefixWithHttp(row.Website)
+      };
+    });
+  },
+  computed: {
+    filteredData() {
+      if (this.selectedCategory === "All") return this.processedData;
+      return this.processedData.filter(row => {
+        return row.Category === this.selectedCategory;
+      });
+    }
+  },
+  methods: {
+    prefixWithHttp(address) {
+      if (!address) return null;
+      if (address.startsWith("https://") || address.startsWith("http://")) {
+        return address;
+      }
+      return `https://${address}`;
+    }
   }
 };
 </script>
