@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container is-fluid box" style="max-width:97vw">
     <p class="has-text-weight-semibold is-size-4" style="margin-bottom: 1em;">
       Holmer Green, local business deliveries.
     </p>
@@ -38,6 +38,7 @@
       :per-page="10"
       sticky-header
       height="600px"
+      scrollable
     >
       <template slot-scope="props">
         <b-table-column sortable searchable field="Business" label="Business">
