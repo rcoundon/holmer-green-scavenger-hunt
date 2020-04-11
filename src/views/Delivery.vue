@@ -1,7 +1,11 @@
 <template>
   <div>
     <p class="has-text-weight-semibold is-size-4" style="margin-bottom: 1em;">
-      Holmer Green, local business deliveries
+      Holmer Green, local business deliveries.
+    </p>
+    <p class="has-text-weight-semibold is-size-5" style="margin-bottom: 1em;">
+      Choose a category using the Category button, and sort the list by tapping
+      <wbr />a header or choosing from the dropdown (if on mobile)
     </p>
     <!-- <b-field grouped class="has-text-center">
       <b-field> -->
@@ -20,11 +24,9 @@
     </b-dropdown>
     <!-- </b-field>
       <b-field> -->
-    <p
-      class="is-size-4 has-text-primary has-text-weight-semibold"
-      style="margin: 1em 0em"
-    >
-      Selected Category: {{ selectedCategory }}
+    <p class="is-size-4 has-text-primary" style="margin: 1em 0em">
+      Showing category:
+      <span class="has-text-weight-bold">{{ selectedCategory }}</span>
     </p>
     <!-- </b-field>
     </b-field> -->
