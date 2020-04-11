@@ -1,11 +1,12 @@
 <template>
   <div id="app">
     <div id="nav">
+      <router-link to="/delivery">Local Business Deliveries</router-link> |
       <router-link to="/">Clue Hunt</router-link> |
       <router-link to="/cardHunt">Card Hunt</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 

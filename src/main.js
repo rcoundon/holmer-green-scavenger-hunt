@@ -13,7 +13,11 @@ import {
   faExclamationTriangle,
   faCheckCircle,
   faSadTear,
-  faSmileBeam
+  faSmileBeam,
+  faArrowUp,
+  faArrowDown,
+  faAngleRight,
+  faAngleLeft
 } from '@fortawesome/pro-solid-svg-icons';
 
 import router from './router'
@@ -23,7 +27,11 @@ library.add([
   faExclamationTriangle,
   faCheckCircle,
   faSadTear,
-  faSmileBeam
+  faSmileBeam,
+  faArrowUp,
+  faArrowDown,
+  faAngleRight,
+  faAngleLeft
 ]);
 
 Vue.component('vue-fontawesome', FontAwesomeIcon);
