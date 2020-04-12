@@ -38,7 +38,6 @@
       :per-page="10"
       sticky-header
       height="600px"
-      scrollable
     >
       <template slot-scope="props">
         <b-table-column sortable searchable field="Business" label="Business">
