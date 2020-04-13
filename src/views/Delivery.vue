@@ -13,14 +13,13 @@
       </button>
 
       <b-dropdown-item value="All" aria-role="listitem">All</b-dropdown-item>
-      <b-dropdown-item value="Food & Drink" aria-role="listitem"
-        >Food & Drink</b-dropdown-item
-      >
-      <b-dropdown-item value="Pharmacy" aria-role="listitem"
-        >Pharmacy</b-dropdown-item
-      >
-      <b-dropdown-item value="Takeaway" aria-role="listitem"
-        >Takeaway</b-dropdown-item
+
+      <b-dropdown-item
+        v-for="category in categories"
+        :value="category"
+        :key="category"
+        aria-role="listitem"
+        >{{ category }}</b-dropdown-item
       >
     </b-dropdown>
     <p class="is-size-4 has-text-primary" style="margin: 1em 0em">
@@ -83,6 +82,21 @@ export default {
       selectedCategory: "All"
     };
   },
+  computed: {
+    filteredData() {
+      if (this.selectedCategory === "All") return this.processedData;
+      return this.processedData.filter(row => {
+        return row.Category === this.selectedCategory;
+      });
+    },
+    categories() {
+      const categories = this.tableData.map(item => {
+        return item.Category;
+      });
+      const uniqueCategories = new Set(categories);
+      return Array.from(uniqueCategories);
+    }
+  },
   created() {
     this.tableData = data;
     this.processedData = this.tableData.map(row => {
@@ -91,14 +105,6 @@ export default {
         Website: this.prefixWithHttp(row.Website)
       };
     });
-  },
-  computed: {
-    filteredData() {
-      if (this.selectedCategory === "All") return this.processedData;
-      return this.processedData.filter(row => {
-        return row.Category === this.selectedCategory;
-      });
-    }
   },
   methods: {
     prefixWithHttp(address) {
