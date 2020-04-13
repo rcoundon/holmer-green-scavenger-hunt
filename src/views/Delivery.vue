@@ -7,8 +7,6 @@
       Choose a category using the Category button, and sort the list by tapping
       <wbr />a header or choosing from the dropdown (if on mobile)
     </p>
-    <!-- <b-field grouped class="has-text-center">
-      <b-field> -->
     <b-dropdown expanded aria-role="list" v-model="selectedCategory">
       <button class="button is-primary" slot="trigger">
         <span>Category</span>
@@ -18,18 +16,17 @@
       <b-dropdown-item value="Food & Drink" aria-role="listitem"
         >Food & Drink</b-dropdown-item
       >
+      <b-dropdown-item value="Pharmacy" aria-role="listitem"
+        >Pharmacy</b-dropdown-item
+      >
       <b-dropdown-item value="Takeaway" aria-role="listitem"
         >Takeaway</b-dropdown-item
       >
     </b-dropdown>
-    <!-- </b-field>
-      <b-field> -->
     <p class="is-size-4 has-text-primary" style="margin: 1em 0em">
       Showing category:
       <span class="has-text-weight-bold">{{ selectedCategory }}</span>
     </p>
-    <!-- </b-field>
-    </b-field> -->
     <b-table
       :mobile-cards="true"
       :data="filteredData"
