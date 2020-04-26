@@ -8,7 +8,7 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
+    path: '/trail',
     name: 'Home',
     component: TrailHuntView
   },
@@ -16,6 +16,11 @@ const routes = [
     path: '/cardHunt',
     name: 'cardHunt',
     component: CardHuntView
+  },
+  {
+    path: '/',
+    name: 'delivery',
+    component: Delivery
   },
   {
     path: '/delivery',
