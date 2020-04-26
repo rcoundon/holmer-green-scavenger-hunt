@@ -20,11 +20,7 @@ const routes = [
   {
     path: '/',
     name: 'delivery',
-    component: Delivery
-  },
-  {
-    path: '/delivery',
-    name: 'delivery',
+    alias: '/delivery',
     component: Delivery
   },
   {
