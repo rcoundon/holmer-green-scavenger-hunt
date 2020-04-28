@@ -1,5 +1,5 @@
 <template>
-  <div class="container is-fluid box" style="max-width:97vw">
+  <div class="container is-fluid box">
     <p class="has-text-weight-semibold is-size-4" style="margin-bottom: 1em;">
       Holmer Green, local business deliveries.
     </p>
@@ -32,8 +32,7 @@
       default-sort="Category"
       :paginated="true"
       :per-page="10"
-      sticky-header
-      height="600px"
+      scrollable
     >
       <template slot-scope="props">
         <b-table-column sortable searchable field="Business" label="Business">
@@ -61,10 +60,14 @@
           {{ props.row["Home delivery"] }}
         </b-table-column>
         <b-table-column sortable searchable field="Range" label="Range">
-          {{ props.row.Range }}
+          <span style="width: 58vw">
+            {{ props.row.Range }}
+          </span>
         </b-table-column>
         <b-table-column sortable searchable field="Comments" label="Comments">
-          {{ props.row.Comments }}
+          <span style="width: 58vw">
+            {{ props.row.Comments }}
+          </span>
         </b-table-column>
       </template>
     </b-table>
