@@ -35,11 +35,17 @@
       scrollable
     >
       <template slot-scope="props">
+        <b-table-column sortable searchable field="Category" label="Category">
+          {{ props.row.Category }}
+        </b-table-column>
+        <b-table-column sortable searchable field="Type" label="Type">
+          {{ props.row.Type }}
+        </b-table-column>
         <b-table-column sortable searchable field="Business" label="Business">
           {{ props.row.Business }}
         </b-table-column>
-        <b-table-column sortable searchable field="Category" label="Category">
-          {{ props.row.Category }}
+        <b-table-column sortable searchable field="Location" label="Location">
+          {{ props.row.Location }}
         </b-table-column>
         <b-table-column sortable field="Phone" label="Phone">
           <a :href="'tel:' + props.row.Phone">{{ props.row.Phone }}</a>
@@ -54,19 +60,14 @@
         <b-table-column
           sortable
           searchable
-          field="Home delivery"
-          label="Home Delivery"
+          field="DeliveryCollection"
+          label="Delivery/Delivery"
         >
-          {{ props.row["Home delivery"] }}
+          {{ props.row.DeliveryCollection }}
         </b-table-column>
         <b-table-column sortable searchable field="Range" label="Range">
           <span style="width: 58vw">
             {{ props.row.Range }}
-          </span>
-        </b-table-column>
-        <b-table-column sortable searchable field="Comments" label="Comments">
-          <span style="width: 58vw">
-            {{ props.row.Comments }}
           </span>
         </b-table-column>
       </template>
