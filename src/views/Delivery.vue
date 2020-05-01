@@ -29,7 +29,7 @@
     <b-table
       :mobile-cards="true"
       :data="filteredData"
-      default-sort="Category"
+      default-sort="Business"
       :paginated="true"
       :per-page="10"
       scrollable
