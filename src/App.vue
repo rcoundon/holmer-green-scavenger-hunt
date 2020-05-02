@@ -13,6 +13,16 @@
   </div>
 </template>
 
+<script>
+export default {
+  created() {
+    if (this.$route.path === "/") {
+      this.$router.push("/delivery");
+    }
+  }
+};
+</script>
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
