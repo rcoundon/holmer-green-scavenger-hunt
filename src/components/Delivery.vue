@@ -1,7 +1,7 @@
 <template>
-  <div class="container is-fluid box">
+  <div>
     <p class="has-text-weight-semibold is-size-4" style="margin-bottom: 1em;">
-      Holmer Green, local business deliveries.
+      {{ title }}
     </p>
     <p class="has-text-weight-semibold is-size-5" style="margin-bottom: 1em;">
       Choose a category using the Category button, and sort the list by tapping
@@ -76,12 +76,21 @@
 </template>
 
 <script>
-import data from "../lib/csvConverter";
-
 export default {
+  props: {
+    tableData: {
+      type: Array,
+      required: true,
+      default: () => []
+    },
+    title: {
+      type: String,
+      required: true,
+      default: ""
+    }
+  },
   data() {
     return {
-      tableData: [],
       processedData: [],
       selectedCategory: "All"
     };
@@ -101,14 +110,18 @@ export default {
       return Array.from(uniqueCategories);
     }
   },
-  created() {
-    this.tableData = data;
-    this.processedData = this.tableData.map(row => {
-      return {
-        ...row,
-        Website: this.prefixWithHttp(row.Website)
-      };
-    });
+  watch: {
+    tableData: {
+      handler: function(newVal) {
+        this.processedData = newVal.map(row => {
+          return {
+            ...row,
+            Website: this.prefixWithHttp(row.Website)
+          };
+        });
+      },
+      immediate: true
+    }
   },
   methods: {
     prefixWithHttp(address) {
