@@ -1,8 +1,8 @@
 ﻿Category,Type,Business,Location,Phone,Email,Website,DeliveryCollection,Range
-,Brewery,Malt the Brewery,"Wren Davis site, Wycombe Road Prestwood",01494 865063,,www.maltthebrewery.co.uk,Delivery,"Beer, wine, Prosecco, gin, tonic and more. Order and pay online at the Malt the Brewery web site"
-,Butchers,Stirret N,"Chequers Parade, Prestwood",01494 864013,,,Collection only,
-,Convenience,Costcutter & Post Office,"High Street, Prestwood",01494 862219,,,Collection only,Convenience store
-,Convenience,Londis & Post Office ,Cryer's Hill,01494 712245,,,Collection only,Convenience store
+Food & Drink,Brewery,Malt the Brewery,"Wren Davis site, Wycombe Road Prestwood",01494 865063,,www.maltthebrewery.co.uk,Delivery,"Beer, wine, Prosecco, gin, tonic and more. Order and pay online at the Malt the Brewery web site"
+Food & Drink,Butchers,Stirret N,"Chequers Parade, Prestwood",01494 864013,,,Collection only,
+Convenience,Convenience,Costcutter & Post Office,"High Street, Prestwood",01494 862219,,,Collection only,Convenience store
+Food & Drink,Convenience,Londis & Post Office ,Cryer's Hill,01494 712245,,,Collection only,Convenience store
 Food & Drink,Deli,2 Pound Street,Wendover,01296 585022,shop@2poundstreet.com,www.2poundstreet.com,Minimum order £20. FREE delivery for Wendover and surrounding villages up to 10miles. For free delivery select collect for FREE option and write a note to confirm we are delivering. If you order before midday your order will be delivered next working day.,"Wines, cheese & deli, hampers & gifts including smoked salmon, pasta, rice, pesto etc, savoury crackers, gluten free products, biscuits cakes & sweet treats"
 Food & Drink,Fruit & Veg,N&P Fruits,At Wren Davis Prestwood,01494 702802,,Facebook - N&P Fruits,Collection & Delivery,"Mixed boxes of fresh fruit and veg, bags of potatoes, glass bottled milk and eggs if available for grab and go outside the shop. Payments by card, bank transfer or PayPal and cash. Taking orders for collection or delivery."
 Food & Drink,Garden Centre,Hildreth's Garden Centre,Wycombe Road. Prestwood,01494 862720,,www.hildreths.co.uk,Collection only,"Bread, flour, pasta, eggs, pet & garden supplies"
@@ -15,10 +15,9 @@ Food & Drink,Various,Peterley Manor Farm Shop,"Peterley Lane, Prestwood",01494 8
 Food & Drink,Various,The Hatchery,"Red Barn Farm, Beaconsfield Road, Coleshill",,thehatchery@hotmail.co.uk,https://www.facebook.com/thehatcheryfarmshop/,Delivery for £5.00 charge - order by email in advance,"Wide choice of meats, organic fruit, sauces & rubs, organic vegetables, vegan foods, dry store goods, gravy & stock, drinks, etc"
 Food & Drink,Various,The Pantry,Cosy Corner. Hazlemere,07801326266,,www.pantryhazlemere.co.uk,Delivery,"Coffee, cakes and veg boxes. "
 Food & Drink,Various,The Pantry at 51,"High Street, Prestwood",01494 258730,,https://www.facebook.com/thepantryat51/,"Delivery or Click & Collect. For a product list, please email us at  hello@thepantryat51.co.uk ","Baking products, Beauty & hair treatments, Bread & pastries, household items & cleaning products, Nuts, oils & vinegars, Pantry items, Pet products, Bottles & containers"
-Takeaway,Burgers  / Kebabs,Holmer Green Kebabs,"Turners Place, Holmer Green",01494 717755,,www.holmergreenkebab.co.uk,Delivery or collection ,
-Takeaway,Burgers  / Kebabs,Jai-Ho Indian Restaurant & Takeaway,Hazlemere Cross Roads,01494 717351 ,,https://www.jai-ho.co.uk/newsite,Free delivery in Holmer Green & surrounding area.,
-Takeaway,Burgers / Kebabs,Matilda's ,"High St, Gt Missenden","01494 890411 or
- 07887359394",,https://www.facebook.com/Matildas,"Free delivery on orders over £25 within 3 miles. Range includes Burgers, Shish Kebabs, Wraps, Chilli, Lasagne, Scampi and sides",
+Takeaway,Burgers / Kebabs,Holmer Green Kebabs,"Turners Place, Holmer Green",01494 717755,,www.holmergreenkebab.co.uk,Delivery or collection ,
+Takeaway,Burgers / Kebabs,Jai-Ho Indian Restaurant & Takeaway,Hazlemere Cross Roads,01494 717351 ,,https://www.jai-ho.co.uk/newsite,Free delivery in Holmer Green & surrounding area.,
+Takeaway,Burgers / Kebabs,Matilda's ,"High St, Gt Missenden","01494 890411 or 07887359394",,https://www.facebook.com/Matildas,"Free delivery on orders over £25 within 3 miles. Range includes Burgers, Shish Kebabs, Wraps, Chilli, Lasagne, Scampi and sides",
 Takeaway,Fish & Chips,Churchill's,"Cosy Corner, Hazlemere",,,https://candc.churchillsfishandchips.co.uk,Churchill's will not be open to walk in customers. You must order using our click and collect service (see left),
 Takeaway,Fish & Chips,Prestwood Plaice,"Chequers Parade, Prestwood",01494 862089,,,Collection only. Open lunchtime 12-1.30 and evening 4.45-8pm,
 Takeaway,Fried Chicken,PeriPeri,"Market Square, Chesham",01494 786784,,www.periperioriginalhp5.co.uk,Collection and Delivery available,
@@ -28,8 +27,7 @@ Takeaway,Indian,Pathila,"Chequers Parade, Prestwood",01494 868484,,www.pathila.c
 Takeaway,Indian,Raj Hazlemere,"Penn Road, Hazlemere",01494 715666 ,rajhazlemere@yamail.co.uk,www.raj-hazlemere.com,Free delivery within 4 miles of Raj Hazlemere. Or 10% off collection,
 Takeaway,Indian,Redhuni,"Church St, Princes Risborough",01844 273741,,www.radhunihp27.co.uk,Delivery and Collection available.,
 Takeaway,Pizza,The Roaming Pizza Company,Various,07867 530149 ,firecraftpizzatruck@gmail.com,https://www.facebook.com/theroamingpizzacompany/,Delivery . Prestwood is Friday night - check Facebook page for available days for area,
-Takeaway,Sri Lankan ,The Stamp,"High St, Gt Missenden","01494 890000 
-or 07599125232 ",,www.thestamp.co.uk,Collection only. Available Wednesday to Saturday,
+Takeaway,Sri Lankan,The Stamp,"High St, Gt Missenden","01494 890000 or 07599125232 ",,www.thestamp.co.uk,Collection only. Available Wednesday to Saturday,
 Takeaway,Sushi,Sushivan,Aston Clinton,,,www.sushivan.co.uk,Delivery and Collection available. Order by 10pm for collection. Delivery available on Wednesdays  ,
 Takeaway,Thai,Gourmet Food Direct,Toby Sharman,07384415702,toby@gourmetfooddirect.co.uk ,www.gourmetfooddirect.co.uk,Home delivery. Order by phone or email before 5pm for Saturday night delivery,
 Takeaway,Thai,Sukothai,"High St, Gt Missenden",01494 862666,sukothaibucks@gmail.com,www.sukothaibucks.co.uk,Collection only,
