@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import TrailHuntView from '../views/TrailHuntView';
 import CardHuntView from '../views/CardHuntView';
-import Delivery from '../views/Delivery';
+import DeliveryContainer from '../views/DeliveryContainer';
 
 Vue.use(VueRouter);
 
@@ -18,10 +18,14 @@ const routes = [
     component: CardHuntView
   },
   {
-    path: '/',
+    path: '/delivery',
     name: 'delivery',
-    alias: '/delivery',
-    component: Delivery
+    component: DeliveryContainer
+  },
+  {
+    path: '/pwDelivery',
+    name: 'pwDelivery',
+    component: DeliveryContainer
   },
   {
     path: '/about',

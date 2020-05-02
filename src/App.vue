@@ -1,14 +1,27 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Holmer Green Deliveries</router-link> |
-      <router-link to="/trail">Clue Hunt</router-link> |
+      <router-link to="/delivery">Holmer Green Deliveries</router-link> |
+      <router-link to="/pwDelivery"
+        >Prestwood & Missenden Deliveries</router-link
+      >
+      | <router-link to="/trail">Clue Hunt</router-link> |
       <router-link to="/cardHunt">Card Hunt</router-link> |
       <router-link to="/about">About</router-link>
     </div>
     <router-view />
   </div>
 </template>
+
+<script>
+export default {
+  created() {
+    if (this.$route.path === "/") {
+      this.$router.push("/delivery");
+    }
+  }
+};
+</script>
 
 <style>
 #app {
