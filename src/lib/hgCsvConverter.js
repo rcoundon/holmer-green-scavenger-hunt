@@ -1,3 +1,3 @@
-const csvData = require('../../data/delivery.csv');
+const csvData = require('../../data/hgDelivery.csv');
 
 export default csvData;
