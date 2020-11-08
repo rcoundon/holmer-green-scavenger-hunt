@@ -5,13 +5,12 @@
 </template>
 
 <script>
-import CardHunt from "../components/CardHunt";
+import CardHunt from '../components/CardHunt';
 export default {
   components: {
-    CardHunt
-  }
+    CardHunt,
+  },
 };
 </script>
 
-<style>
-</style>
+<style></style>

@@ -1,60 +1,60 @@
 <template>
-<div>
-  <count id="top-answers" :allRight="allRight" :totalQuestions="totalQuestions" :numberCorrect="numberCorrect" ></count>
-  <div class="tile" style="min-height: 100vh">
-    <div class="tile is-vertical is-parent">
-      <div class="tile is-child box question-box" v-for="question in questions" :key="question.id">
-        <div style="text-align: center">
-          <img v-if="question.image" :src="getImageUrl(question)" class="clue-image" style="margin: auto; max-height: 15rem"/>
+  <div>
+    <count id="top-answers" :all-right="allRight" :total-questions="totalQuestions" :number-correct="numberCorrect"></count>
+    <div class="tile" style="min-height: 100vh">
+      <div class="tile is-vertical is-parent">
+        <div v-for="question in questions" :key="question.id" class="tile is-child box question-box">
+          <div style="text-align: center">
+            <img v-if="question.image" :src="getImageUrl(question)" class="clue-image" style="margin: auto; max-height: 15rem" />
+          </div>
+          <p class="has-text-weight-semibold">{{ question.id }}: {{ question.text }}</p>
+          <b-field>
+            <b-input v-model="form[question.id]" placeholder="Enter your answer" />
+          </b-field>
+          <b-button icon-left="check-circle" type="is-success" @click="checkAnswers(false)">Check answers</b-button>
         </div>
-        <p class="has-text-weight-semibold">{{ question.id}}: {{question.text }}</p>
-        <b-field>
-          <b-input placeholder="Enter your answer" v-model="form[question.id]"/>
-        </b-field>
-          <b-button icon-left="check-circle" @click="checkAnswers(false)" type="is-success">Check answers</b-button>
+        <div class="grouped buttons tile" style="margin: auto">
+          <b-button icon-left="exclamation-triangle" class="is-danger" @click="clearAnswers()">Clear all answers</b-button>
+        </div>
+        <count :all-right="allRight" :total-questions="totalQuestions" :number-correct="numberCorrect"></count>
       </div>
-      <div class="grouped buttons tile" style="margin: auto;">
-        <b-button icon-left="exclamation-triangle" class="is-danger" @click="clearAnswers()">Clear all answers</b-button>
-      </div>
-      <count :allRight="allRight" :totalQuestions="totalQuestions" :numberCorrect="numberCorrect" ></count>
     </div>
-  </div>
-  <b-modal :active.sync="isCardModalActive" :width="640" scroll="keep">
-    <div class="card">
-      <div style="display: flex">
-        <!-- <figure class=""> -->
-        <img :src="successImage" alt="Yoda" style="width:70em">
-        <!-- </figure> -->
-        <div class="card-content">
-          <div class="content is-size-4">
-            {{successMessage}}
+    <b-modal :active.sync="isCardModalActive" :width="640" scroll="keep">
+      <div class="card">
+        <div style="display: flex">
+          <!-- <figure class=""> -->
+          <img :src="successImage" alt="Yoda" style="width: 70em" />
+          <!-- </figure> -->
+          <div class="card-content">
+            <div class="content is-size-4">
+              {{ successMessage }}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </b-modal>
-</div>
+    </b-modal>
+  </div>
 </template>
 
 <script>
-import config from "../../data/config";
-import { mapGetters } from "vuex";
-import Count from "./Count";
+import config from '../../data/config';
+import { mapGetters } from 'vuex';
+import Count from './Count';
 
 export default {
   components: {
-    Count
+    Count,
   },
   data: () => {
     return {
       config,
       form: {},
       numberCorrect: 0,
-      isCardModalActive: false
+      isCardModalActive: false,
     };
   },
   computed: {
-    ...mapGetters(["answers"]),
+    ...mapGetters(['answers']),
     questions() {
       return this.config.clueHunt.clues;
     },
@@ -68,21 +68,25 @@ export default {
       return this.numberCorrect === this.totalQuestions;
     },
     successImage() {
-      return require("../assets/yoda.png");
-    }
+      return require('../assets/yoda.png');
+    },
+  },
+  created() {
+    this.retrieveAnswersFromStore();
+    this.checkAnswers(true);
   },
   methods: {
     clearAnswers() {
       this.$buefy.dialog.confirm({
-        title: "Delete Answers!",
+        title: 'Delete Answers!',
         message: `This will delete all your answers, are you sure?`,
-        cancelText: "Cancel",
-        confirmText: "Delete",
-        type: "is-danger",
+        cancelText: 'Cancel',
+        confirmText: 'Delete',
+        type: 'is-danger',
         onConfirm: () => {
-          this.$store.dispatch("storeAnswers", {});
+          this.$store.dispatch('storeAnswers', {});
           this.form = {};
-        }
+        },
       });
     },
     getImageUrl(question) {
@@ -90,20 +94,18 @@ export default {
       return photo;
     },
     checkAnswers(initialLoad = false) {
-      this.$store.dispatch("storeAnswers", this.form);
+      this.$store.dispatch('storeAnswers', this.form);
       this.numberCorrect = 0;
-      this.questions.forEach(question => {
+      this.questions.forEach((question) => {
         let thisAnswer = this.form[question.id];
         if (thisAnswer) {
-          if (
-            thisAnswer.trim().toLowerCase() == question.answer.toLowerCase()
-          ) {
+          if (thisAnswer.trim().toLowerCase() == question.answer.toLowerCase()) {
             this.numberCorrect++;
           }
         }
       });
       if (!initialLoad) {
-        this.$scrollTo("#top-answers", 1000);
+        this.$scrollTo('#top-answers', 1000);
       }
       if (this.allRight) {
         this.isCardModalActive = true;
@@ -112,12 +114,8 @@ export default {
     retrieveAnswersFromStore() {
       Object.assign(this.form, this.answers);
       this.$forceUpdate();
-    }
+    },
   },
-  created() {
-    this.retrieveAnswersFromStore();
-    this.checkAnswers(true);
-  }
 };
 </script>
 

@@ -17,10 +17,10 @@ import {
   faArrowUp,
   faArrowDown,
   faAngleRight,
-  faAngleLeft
+  faAngleLeft,
 } from '@fortawesome/pro-solid-svg-icons';
 
-import router from './router'
+import router from './router';
 
 library.add([
   faTreasureChest,
@@ -31,21 +31,21 @@ library.add([
   faArrowUp,
   faArrowDown,
   faAngleRight,
-  faAngleLeft
+  faAngleLeft,
 ]);
 
-Vue.component('vue-fontawesome', FontAwesomeIcon);
+Vue.component('VueFontawesome', FontAwesomeIcon);
 
 Vue.use(Buefy, {
   defaultIconComponent: 'vue-fontawesome',
-  defaultIconPack: 'fas'
+  defaultIconPack: 'fas',
 });
 Vue.use(VueScrollTo);
 
 Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App),
+  render: (h) => h(App),
   router,
-  store
+  store,
 }).$mount('#app');

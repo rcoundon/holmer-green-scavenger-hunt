@@ -1,6 +1,5 @@
 <template>
-  <b-table sticky-header :data="streetCounts" :columns="columns">
-  </b-table>
+  <b-table sticky-header :data="streetCounts" :columns="columns"> </b-table>
 </template>
 
 <script>
@@ -8,15 +7,14 @@ export default {
   props: {
     streetCounts: {
       type: Array,
-      required: true
+      required: true,
     },
     columns: {
       type: Array,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 };
 </script>
 
-<style>
-</style>
+<style></style>

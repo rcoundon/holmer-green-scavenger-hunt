@@ -12,7 +12,7 @@ export default new Vuex.Store({
   getters,
   plugins: [
     createPersistedState({
-      storage: window.localStorage
-    })
-  ]
+      storage: window.localStorage,
+    }),
+  ],
 });

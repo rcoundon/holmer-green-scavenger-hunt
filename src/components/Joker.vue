@@ -1,17 +1,11 @@
 <template>
-  <div >
+  <div>
+    <b-field position="is-centered"> </b-field>
+    <p class="has-text-weight-semibold" :style="jokerColour">{{ colour }} Joker</p>
     <b-field position="is-centered">
-    </b-field>
-    <p class="has-text-weight-semibold" :style="jokerColour">
-    {{colour}} Joker
-    </p>
-    <b-field position="is-centered">
-      <b-select placeholder="Select a street" v-model="localStreet">
-        <option
-          v-for="street in streets"
-          :value="street"
-          :key="street">
-          {{ street }}
+      <b-select v-model="localStreet" placeholder="Select a street">
+        <option v-for="theStreet in streets" :key="theStreet" :value="street">
+          {{ theStreet }}
         </option>
       </b-select>
       <b-field grouped>
@@ -28,55 +22,56 @@
 
 <script>
 export default {
-  name: "joker",
+  name: 'Joker',
   props: {
     colour: {
       type: String,
-      required: false
+      required: false,
+      default: '',
     },
     street: {
       type: String,
-      required: false
+      required: false,
+      default: '',
     },
     streets: {
       type: Array,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
-      localStreet: undefined
+      localStreet: undefined,
     };
   },
   computed: {
     jokerColour() {
-      if (this.colour === "Red") return "color: red;";
-      if (this.colour === "Black") return "color: black;";
-      return "";
+      if (this.colour === 'Red') return 'color: red;';
+      if (this.colour === 'Black') return 'color: black;';
+      return '';
     },
     disableSave() {
       return !this.localStreet;
-    }
+    },
+  },
+  created() {
+    this.localStreet = this.street;
   },
   methods: {
     saveCard() {
       const card = {
         colour: this.colour,
-        street: this.localStreet
+        street: this.localStreet,
       };
-      console.log("saveCard", card);
-      this.$emit("saveJoker", card);
+      console.log('saveCard', card);
+      this.$emit('save-joker', card);
     },
     deleteCard() {
-      this.localStreet = "";
-      this.$emit("deleteJoker", this.colour);
-    }
+      this.localStreet = '';
+      this.$emit('delete-joker', this.colour);
+    },
   },
-  created() {
-    this.localStreet = this.street;
-  }
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

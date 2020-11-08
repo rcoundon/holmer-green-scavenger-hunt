@@ -7,7 +7,7 @@ export const state = {
   blackJoker: '',
   redJoker: '',
   cardId: 0,
-  totalCardsCorrect: 0
+  totalCardsCorrect: 0,
 };
 
 export const mutations = {
@@ -23,7 +23,7 @@ export const mutations = {
       if (state.cards[i].id === payload.id) {
         const newCard = {
           ...payload,
-          saved: true
+          saved: true,
         };
         Vue.set(state.cards, i, newCard);
         found = true;
@@ -33,13 +33,13 @@ export const mutations = {
     if (!found) {
       let card = {
         ...payload,
-        saved: false
+        saved: false,
       };
       state.cards.push(card);
     }
   },
   DELETE_CARD(state, cardId) {
-    const cardsWithThisOneRemoved = state.cards.filter(card => {
+    const cardsWithThisOneRemoved = state.cards.filter((card) => {
       return card.id !== cardId;
     });
     state.cards = cardsWithThisOneRemoved;
@@ -57,7 +57,7 @@ export const mutations = {
   STORE_BLACK_JOKER(state, payload) {
     console.log('persisting black', payload);
     state.blackJoker = payload;
-  }
+  },
 };
 
 export const actions = {
@@ -88,17 +88,17 @@ export const actions = {
   storeBlackJoker({ commit }, payload) {
     console.log('store received', payload);
     commit('STORE_BLACK_JOKER', payload);
-  }
+  },
 };
 
 export const getters = {
-  answers: state => state.answers,
-  shownFirstPopup: state => state.shownFirstPopup,
-  cards: state => state.cards,
-  cardId: state => state.cardId,
-  totalCards: state => {
+  answers: (state) => state.answers,
+  shownFirstPopup: (state) => state.shownFirstPopup,
+  cards: (state) => state.cards,
+  cardId: (state) => state.cardId,
+  totalCards: (state) => {
     let total = 0;
-    const savedCards = state.cards.filter(card => {
+    const savedCards = state.cards.filter((card) => {
       return card.saved;
     });
     total = savedCards.length;
@@ -106,7 +106,7 @@ export const getters = {
     if (state.blackJoker) total++;
     return total;
   },
-  totalCardsCorrect: state => state.totalCardsCorrect,
-  redJoker: state => state.redJoker,
-  blackJoker: state => state.blackJoker
+  totalCardsCorrect: (state) => state.totalCardsCorrect,
+  redJoker: (state) => state.redJoker,
+  blackJoker: (state) => state.blackJoker,
 };

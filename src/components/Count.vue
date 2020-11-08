@@ -1,28 +1,30 @@
 <template>
-    <div class="is-size-2 has-text-weight-semibold count" :class="successClass">
-      {{numberCorrect}} correct out of {{totalQuestions}}
-    <b-icon v-if="!allRight" icon="sad-tear"/>
-    <b-icon v-else icon="smile-beam"/>
+  <div class="is-size-2 has-text-weight-semibold count" :class="successClass">
+    {{ numberCorrect }} correct out of {{ totalQuestions }}
+    <b-icon v-if="!allRight" icon="sad-tear" />
+    <b-icon v-else icon="smile-beam" />
   </div>
 </template>
 <script>
 export default {
   props: {
     numberCorrect: {
-      type: Number
+      type: Number,
+      default: -1,
     },
     totalQuestions: {
-      type: Number
+      type: Number,
+      default: -1,
     },
     allRight: {
-      type: Boolean
-    }
+      type: Boolean,
+    },
   },
   computed: {
     successClass() {
-      return !this.allRight ? "count-failure" : "count-success";
-    }
-  }
+      return !this.allRight ? 'count-failure' : 'count-success';
+    },
+  },
 };
 </script>
 
