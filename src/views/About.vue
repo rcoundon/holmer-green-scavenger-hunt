@@ -1,6 +1,6 @@
 <template>
   <div class="about container is-fluid">
-    <p class="is-size-4">
+    <p class="is-size-5">
       Mel & Ross hope you enjoy playing our little clue trail and card hunt around Holmer Green.<br /><br />
       <u class="has-text-danger"><b>Before taking part</b></u> you must familiarise yourself with and observe the
       <u class="has-text-danger"><b>current</b></u>

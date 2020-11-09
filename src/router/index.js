@@ -7,26 +7,26 @@ import DeliveryContainer from '../views/DeliveryContainer';
 Vue.use(VueRouter);
 
 const routes = [
-  {
-    path: '/trail',
-    name: 'Home',
-    component: TrailHuntView,
-  },
-  {
-    path: '/cardHunt',
-    name: 'cardHunt',
-    component: CardHuntView,
-  },
+  // {
+  //   path: '/trail',
+  //   name: 'Home',
+  //   component: TrailHuntView,
+  // },
+  // {
+  //   path: '/cardHunt',
+  //   name: 'cardHunt',
+  //   component: CardHuntView,
+  // },
   {
     path: '/delivery',
     name: 'delivery',
     component: DeliveryContainer,
   },
-  {
-    path: '/pwDelivery',
-    name: 'pwDelivery',
-    component: DeliveryContainer,
-  },
+  // {
+  //   path: '/pwDelivery',
+  //   name: 'pwDelivery',
+  //   component: DeliveryContainer,
+  // },
   {
     path: '/about',
     name: 'About',
